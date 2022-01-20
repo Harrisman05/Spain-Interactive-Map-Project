@@ -29,40 +29,39 @@ body {
 }
 
 .mapLegendContainer {
-  display: flex;
   position: absolute;
   top: 5%;
   left: 5%;
   z-index: 10;
   background-color: white;
   border: 1px black solid;
-  padding: 10px;
-  width: 20%;
+  padding: 1vw;
 }
 
 .mapLegendList {
-  list-style-position: inside;
   width: 100%;
-  overflow: hidden;
 }
 
 .mapLegendList li {
   font-size: 1.1vw;
   white-space: nowrap;
-  padding: 1vh 0 1vh 1vh;
+  padding: 0.2vh 0 0.2vh 0.2vh;
   list-style-type: none;
 }
 
-.GaliciaBox {
+.mapLegendBoxes {
   display: inline-block;
-  width: 0.9vw;
-  height: 0.9vw;
-  background-color: red;
+  width: 1.5vw;
+  height: 1.5vw;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  top: 0.15vw;
+  margin-right: 0.3vw;
 }
 
 svg {
   border: solid blue 5px;
-  background: rgb(213, 213, 247);
+  background: rgb(210, 211, 243);
   height: 100%;
   width: 100%;
   position: relative;
@@ -73,14 +72,15 @@ svg {
 svg path {
   fill: black;
   stroke: rgb(255, 255, 255);
-  stroke-width: 1;
+  stroke-width: 2;
 }
 
 svg path:hover {
-  fill: #006284;
-  stroke: #006284;
+  fill: #000000;
+  stroke: #000000;
   transition: 0.6s;
   cursor: pointer;
+  /* 15% lighter */
 }
 
 .GaliciaRegion {
@@ -88,9 +88,41 @@ svg path:hover {
   stroke: green;
 }
 
+.GaliciaRegion:hover {
+  fill: #26a626;
+  stroke: #26a626;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+#GaliciaBox {
+  background: green;
+}
+
+.GaliciaListItem:hover {
+  background-color: #26a626;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
 .AsturiasRegion {
-  fill: orange;
-  stroke: orange;
+  fill: rgb(255, 115, 0);
+  stroke: rgb(255, 115, 0);
+}
+.AsturiasRegion:hover {
+  /* 15% lighter */
+  fill: #ffa633;
+  stroke: #ffa633;
+}
+
+#AsturiasBox {
+  background-color: rgb(255, 115, 0);
+}
+
+.AsturiasListItem:hover {
+  background-color: #ffa633;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .CantabriaRegion {
@@ -98,14 +130,59 @@ svg path:hover {
   stroke: rgb(255, 0, 234);
 }
 
+.CantabriaRegion:hover {
+  fill: #ff66ff;
+  stroke: #ff66ff;
+}
+
+#CantabriaBox {
+  background-color: rgb(255, 0, 234);
+}
+
+.CantabriaListItem:hover {
+  background-color: #ff66ff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
 .BasqueCountryRegion {
-  fill: rgb(218, 218, 22);
-  stroke: rgb(218, 218, 22);
+  fill: rgb(30, 161, 150);
+  stroke: rgb(30, 161, 150);
+}
+
+.BasqueCountryRegion:hover {
+  fill: #44c7bc;
+  stroke: #44c7bc;
+}
+
+#BasqueCountryBox {
+  background-color: rgb(30, 161, 150);
+}
+
+.BasqueCountryListItem:hover {
+  background-color: #44c7bc;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .NavarraRegion {
-  fill: rgb(218, 72, 84);
-  stroke: rgb(218, 72, 84);
+  fill: #dfb790;
+  stroke: #dfb790;
+}
+
+.NavarraRegion:hover {
+  fill: #ffeac3;
+  stroke: #ffeac3;
+}
+
+#NavarraBox {
+  background-color: #dfb790;
+}
+
+.NavarraListItem:hover {
+  background-color: #ffeac3;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .AragonRegion {
@@ -113,19 +190,79 @@ svg path:hover {
   stroke: rgb(141, 41, 235);
 }
 
-.CataloniaRegion {
-  fill: rgb(41, 174, 235);
-  stroke: rgb(41, 174, 235);
+.AragonRegion:hover {
+  fill: #c05cff;
+  stroke: #c05cff;
 }
 
-.laRiojaRegion {
-  fill: rgb(129, 10, 10);
-  stroke: rgb(129, 10, 10);
+#AragonBox {
+  background-color: rgb(141, 41, 235);
+}
+
+.AragonListItem:hover {
+  background-color: #c05cff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.CataloniaRegion {
+  fill: rgb(218, 72, 84);
+  stroke: rgb(218, 72, 84);
+}
+
+.CataloniaRegion:hover {
+  fill: #f4626e;
+  stroke: #f4626e;
+}
+
+#CataloniaBox {
+  background-color: rgb(218, 72, 84);
+}
+
+.CataloniaListItem:hover {
+  background-color: #f4626e;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.LaRiojaRegion {
+  fill: #807972;
+  stroke: #807972;
+}
+
+.LaRiojaRegion:hover {
+  fill: #cdc6bf;
+  stroke: #cdc6bf;
+}
+
+#LaRiojaBox {
+  background-color: #807972;
+}
+
+.LaRiojaListItem:hover {
+  background-color: #cdc6bf;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .CastileYLeonRegion {
-  fill: rgb(103, 151, 173);
-  /* stroke: rgb(103, 151, 173); */
+  fill: rgb(35, 27, 146);
+  stroke: rgb(35, 27, 146);
+}
+
+.CastileYLeonRegion:hover {
+  fill: #635bd2;
+  stroke: #635bd2;
+}
+
+#CastileYLeonBox {
+  background-color: rgb(35, 27, 146);
+}
+
+.CastileYLeonListItem:hover {
+  background-color: #635bd2;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .MadridRegion {
@@ -133,33 +270,117 @@ svg path:hover {
   stroke: rgb(47, 209, 56);
 }
 
-.CastileLaManchaRegion {
-  fill: rgb(247, 101, 125);
-  stroke: rgb(247, 101, 125);
+.MadridRegion:hover {
+  fill: #62ff6b;
+  stroke: #62ff6b;
+}
+
+#MadridBox {
+  background-color: rgb(47, 209, 56);
+}
+
+.MadridListItem:hover {
+  background-color: #62ff6b;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .ExtremaduraRegion {
-  fill: rgb(21, 15, 110);
-  stroke: rgb(21, 15, 110);
+  fill: rgb(12, 166, 238);
+  stroke: rgb(12, 166, 238);
+}
+
+.ExtremaduraRegion:hover {
+  fill: #3fd9ff;
+  stroke: #3fd9ff;
+}
+
+#ExtremaduraBox {
+  background-color: rgb(12, 166, 238);
+}
+
+.ExtremaduraListItem:hover {
+  background-color: #3fd9ff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.CastileLaManchaRegion {
+  fill: rgb(252, 142, 160);
+  stroke: rgb(252, 142, 160);
+}
+
+.CastileLaManchaRegion:hover {
+  fill: #ffc1d3;
+  stroke: #ffc1d3;
+}
+
+#CastileLaManchaBox {
+  background-color: rgb(252, 142, 160);
+}
+
+.CastileLaManchaListItem:hover {
+  background-color: #ffc1d3;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .ValenciaRegion {
-  fill: gold;
-  stroke: gold;
+  fill: rgb(255, 215, 0);
+  stroke: rgb(255, 215, 0);
+}
+
+.ValenciaRegion:hover {
+  fill: #ffff33;
+  stroke: #ffff33;
+}
+
+#ValenciaBox {
+  background-color: rgb(255, 215, 0);
+}
+
+.ValenciaListItem:hover {
+  background-color: #ffff33;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .MurciaRegion {
-  fill: rgb(30, 161, 150);
-  stroke: rgb(30, 161, 150);
+  fill: #703902;
+  stroke: #703902;
+}
+
+.MurciaRegion:hover {
+  fill: #bd864f;
+  stroke: #bd864f;
+}
+
+#MurciaBox {
+  background-color: #703902;
+}
+
+.MurciaListItem:hover {
+  background-color: #bd864f;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .AndalusiaRegion {
-  fill: rgb(170, 26, 26);
-  stroke: rgb(170, 26, 26);
+  fill: rgb(153, 17, 17);
+  stroke: rgb(153, 17, 17);
 }
 
-/* 
-text {
-  z-index: 10;
-  position: absolute;
-} */
+.AndalusiaRegion:hover {
+  fill: #cc4444;
+  stroke: #cc4444;
+}
+
+#AndalusiaBox {
+  background-color: rgb(153, 17, 17);
+}
+
+.AndalusiaListItem:hover {
+  background-color: #cc4444;
+  transition: 0.6s;
+  cursor: pointer;
+}

@@ -266,21 +266,21 @@ svg path:hover {
 }
 
 .MadridRegion {
-  fill: rgb(47, 209, 56);
-  stroke: rgb(47, 209, 56);
+  fill: rgb(255, 215, 0);
+  stroke: rgb(255, 215, 0);
 }
 
 .MadridRegion:hover {
-  fill: #62ff6b;
-  stroke: #62ff6b;
+  fill: #ffff33;
+  stroke: #ffff33;
 }
 
 #MadridBox {
-  background-color: rgb(47, 209, 56);
+  background-color: rgb(255, 215, 0);
 }
 
 .MadridListItem:hover {
-  background-color: #62ff6b;
+  background-color: #ffff33;
   transition: 0.6s;
   cursor: pointer;
 }
@@ -326,21 +326,21 @@ svg path:hover {
 }
 
 .ValenciaRegion {
-  fill: rgb(255, 215, 0);
-  stroke: rgb(255, 215, 0);
+  fill: rgb(33, 63, 33);
+  stroke: rgb(33, 63, 33);
 }
 
 .ValenciaRegion:hover {
-  fill: #ffff33;
-  stroke: #ffff33;
+  fill: #547254;
+  stroke: #547254;
 }
 
 #ValenciaBox {
-  background-color: rgb(255, 215, 0);
+  background-color: rgb(33, 63, 33);
 }
 
 .ValenciaListItem:hover {
-  background-color: #ffff33;
+  background-color: #547254;
   transition: 0.6s;
   cursor: pointer;
 }

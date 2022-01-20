@@ -25,7 +25,9 @@ const ValenciaRegionNodeList = document.querySelectorAll(".ValenciaRegion");
 const MurciaRegionNodeList = document.querySelectorAll(".MurciaRegion");
 const AndalusiaRegionNodeList = document.querySelectorAll(".AndalusiaRegion");
 
-const RegionHoverEffects = function (
+////////////////////////////////////////// Legend Effect Function Creation /////////////////////////////////
+
+const LegendHoverEffects = function (
   regionListItem = null,
   regionBox = null,
   regionLegendText = null,
@@ -60,7 +62,9 @@ const RegionHoverEffects = function (
   );
 };
 
-RegionHoverEffects(
+//////////////////////////////////////////////// Legend Effects Function Calls ////////////////////////////////////////
+
+LegendHoverEffects(
   ".GaliciaListItem",
   "#GaliciaBox",
   ".GaliciaLegendText",
@@ -69,7 +73,7 @@ RegionHoverEffects(
   "white"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".AsturiasListItem",
   "#AsturiasBox",
   ".AsturiasLegendText",
@@ -78,7 +82,7 @@ RegionHoverEffects(
   "black"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".CantabriaListItem",
   "#CantabriaBox",
   ".CantabriaLegendText",
@@ -87,7 +91,7 @@ RegionHoverEffects(
   "white"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".BasqueCountryListItem",
   "#BasqueCountryBox",
   ".BasqueCountryLegendText",
@@ -96,7 +100,7 @@ RegionHoverEffects(
   "white"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".NavarraListItem",
   "#NavarraBox",
   ".NavarraLegendText",
@@ -105,7 +109,7 @@ RegionHoverEffects(
   "black"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".AragonListItem",
   "#AragonBox",
   ".AragonLegendText",
@@ -114,7 +118,7 @@ RegionHoverEffects(
   "white"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".CataloniaListItem",
   "#CataloniaBox",
   ".CataloniaLegendText",
@@ -123,7 +127,7 @@ RegionHoverEffects(
   "white"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".LaRiojaListItem",
   "#LaRiojaBox",
   ".LaRiojaLegendText",
@@ -132,7 +136,7 @@ RegionHoverEffects(
   "#cdc6bf"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".CastileYLeonListItem",
   "#CastileYLeonBox",
   ".CastileYLeonLegendText",
@@ -141,16 +145,16 @@ RegionHoverEffects(
   "white"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".MadridListItem",
   "#MadridBox",
   ".MadridLegendText",
   MadridRegionNodeList,
-  "#62ff6b",
-  "#62ff6b"
+  "#ffff33",
+  "black"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".ExtremaduraListItem",
   "#ExtremaduraBox",
   ".ExtremaduraLegendText",
@@ -159,7 +163,7 @@ RegionHoverEffects(
   "black"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".CastileLaManchaListItem",
   "#CastileLaManchaBox",
   ".CastileLaManchaLegendText",
@@ -168,16 +172,16 @@ RegionHoverEffects(
   "black"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".ValenciaListItem",
   "#ValenciaBox",
   ".ValenciaLegendText",
   ValenciaRegionNodeList,
-  "#ffff33",
-  "black"
+  "#547254",
+  "white"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".MurciaListItem",
   "#MurciaBox",
   ".MurciaLegendText",
@@ -186,11 +190,52 @@ RegionHoverEffects(
   "black"
 );
 
-RegionHoverEffects(
+LegendHoverEffects(
   ".AndalusiaListItem",
   "#AndalusiaBox",
   ".AndalusiaLegendText",
   AndalusiaRegionNodeList,
   "#cc4444",
-  "black"
+  "white"
 );
+
+//////////////////////////////////////////// Map Hover Function Creation ////////////////////////////////////
+
+const MapHoverEffects = function (
+  regionNodeList,
+  provinceFillColour,
+  strokeColour
+) {
+  $(regionNodeList).hover(
+    function () {
+      $(this).css("fill", provinceFillColour);
+      regionNodeList.forEach((element) => {
+        element.style.stroke = strokeColour;
+        element.style.transition = "0.6s";
+      });
+    },
+    function () {
+      $(this).css("fill", "");
+      regionNodeList.forEach((element) => {
+        element.style.stroke = "";
+        element.style.transition = "0.6s";
+      });
+    }
+  );
+};
+
+MapHoverEffects(GaliciaRegionNodeList, "#26a626", "white");
+MapHoverEffects(AsturiasRegionNodeList, "#ffa633", "black");
+MapHoverEffects(CantabriaRegionNodeList, "#ff66ff", "white");
+MapHoverEffects(BasqueCountryRegionNodeList, "#44c7bc", "white");
+MapHoverEffects(NavarraRegionNodeList, "#ffeac3", "black");
+MapHoverEffects(AragonRegionNodeList, "#c05cff", "white");
+MapHoverEffects(LaRiojaRegionNodeList, "#cdc6bf", "");
+MapHoverEffects(CataloniaRegionNodeList, "#f4626e", "white");
+MapHoverEffects(CastileYLeonRegionNodeList, "#635bd2", "white");
+MapHoverEffects(MadridRegionNodeList, "#ffff33", "black");
+MapHoverEffects(ExtremaduraRegionNodeList, "#3fd9ff", "white");
+MapHoverEffects(CastileLaManchaRegionNodeList, "#ffc1d3", "black");
+MapHoverEffects(ValenciaRegionNodeList, "#547254", "white");
+MapHoverEffects(MurciaRegionNodeList, "#bd864f", "black");
+MapHoverEffects(AndalusiaRegionNodeList, "#cc4444", "white");

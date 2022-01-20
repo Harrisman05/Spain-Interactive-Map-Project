@@ -1,0 +1,13 @@
+color choice - good contrast with varied color palette, all selection shade each tone betwen 10-30%, depending on the initial darkness of the colour. Strokes either white or black depending on colour of region.
+
+RGB to Hex converter used online - https://rgb.to/33,63,33
+
+Hex color lighener/darkener used to create the light shades - https://www.cssfontstack.com/oldsites/hexcolortool/
+
+functions
+
+hover map legend - utilises jquery hover function so that a hoveron, hoveroff state can really easily be achieved. Hovering on map interactively lights up the map for quick recognition. Transitions used for smooth effects
+
+hover map - again, uses j query hover function. Use of this key word to target the specific province (element) in the region (nodelist) using forEach loop. Gives the appearance that the user is focussed on the specific region, then further feedback on which province their mouse is hovering on. 
+
+hover map legend function and hover map function are both called 15 times each. Trying to figure out way to store region data in object and then use for loop to call all the functions within a loop

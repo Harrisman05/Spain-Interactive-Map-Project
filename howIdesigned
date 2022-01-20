@@ -11,3 +11,5 @@ hover map legend - utilises jquery hover function so that a hoveron, hoveroff st
 hover map - again, uses j query hover function. Use of this key word to target the specific province (element) in the region (nodelist) using forEach loop. Gives the appearance that the user is focussed on the specific region, then further feedback on which province their mouse is hovering on. 
 
 hover map legend function and hover map function are both called 15 times each. Trying to figure out way to store region data in object and then use for loop to call all the functions within a loop
+
+Refactored code so that regions were put into objects so I could call a loop on the hover function. Bracket notation used for object property so that I can pass a changing variable into it (from for loop)

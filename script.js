@@ -25,15 +25,156 @@ const ValenciaRegionNodeList = document.querySelectorAll(".ValenciaRegion");
 const MurciaRegionNodeList = document.querySelectorAll(".MurciaRegion");
 const AndalusiaRegionNodeList = document.querySelectorAll(".AndalusiaRegion");
 
+const allRegions = [
+  "Galicia",
+  "Asturias",
+  "Cantabria",
+  "BasqueCountry",
+  "Navarra",
+  "Aragon",
+  "Catalonia",
+  "LaRioja",
+  "CastileYLeon",
+  "Madrid",
+  "Extremadura",
+  "CastileLaMancha",
+  "Valencia",
+  "Murcia",
+  "Andalusia",
+];
+
+const regionsObj = {
+  Galicia: {
+    listClass: ".GaliciaListItem",
+    boxId: "#GaliciaBox",
+    textClass: ".GaliciaLegendText",
+    provinceNodeList: GaliciaRegionNodeList,
+    lighterColourChange: "#26a626",
+    strokeColour: "white",
+  },
+  Asturias: {
+    listClass: ".AsturiasListItem",
+    boxId: "#AsturiasBox",
+    textClass: ".AsturiasLegendText",
+    provinceNodeList: AsturiasRegionNodeList,
+    lighterColourChange: "#ffa633",
+    strokeColour: "black",
+  },
+  Cantabria: {
+    listClass: ".CantabriaListItem",
+    boxId: "#CantabriaBox",
+    textClass: ".CantabriaLegendText",
+    provinceNodeList: CantabriaRegionNodeList,
+    lighterColourChange: "#ff66ff",
+    strokeColour: "white",
+  },
+  BasqueCountry: {
+    listClass: ".BasqueCountryListItem",
+    boxId: "#BasqueCountryBox",
+    textClass: ".BasqueCountryLegendText",
+    provinceNodeList: BasqueCountryRegionNodeList,
+    lighterColourChange: "#44c7bc",
+    strokeColour: "white",
+  },
+  Navarra: {
+    listClass: ".NavarraListItem",
+    boxId: "#NavarraBox",
+    textClass: ".NavarraLegendText",
+    provinceNodeList: NavarraRegionNodeList,
+    lighterColourChange: "#ffeac3",
+    strokeColour: "black",
+  },
+  Aragon: {
+    listClass: ".AragonListItem",
+    boxId: "#AragonBox",
+    textClass: ".AragonLegendText",
+    provinceNodeList: AragonRegionNodeList,
+    lighterColourChange: "#c05cff",
+    strokeColour: "white",
+  },
+  Catalonia: {
+    listClass: ".CataloniaListItem",
+    boxId: "#CataloniaBox",
+    textClass: ".CataloniaLegendText",
+    provinceNodeList: CataloniaRegionNodeList,
+    lighterColourChange: "#f4626e",
+    strokeColour: "white",
+  },
+  LaRioja: {
+    listClass: ".LaRiojaListItem",
+    boxId: "#LaRiojaBox",
+    textClass: ".LaRiojaLegendText",
+    provinceNodeList: LaRiojaRegionNodeList,
+    lighterColourChange: "#cdc6bf",
+    strokeColour: "#cdc6bf",
+  },
+  CastileYLeon: {
+    listClass: ".CastileYLeonListItem",
+    boxId: "#CastileYLeonBox",
+    textClass: ".CastileYLeonLegendText",
+    provinceNodeList: CastileYLeonRegionNodeList,
+    lighterColourChange: "#635bd2",
+    strokeColour: "white",
+  },
+  Madrid: {
+    listClass: ".MadridListItem",
+    boxId: "#MadridBox",
+    textClass: ".MadridLegendText",
+    provinceNodeList: MadridRegionNodeList,
+    lighterColourChange: "#ffff33",
+    strokeColour: "black",
+  },
+  Extremadura: {
+    listClass: ".ExtremaduraListItem",
+    boxId: "#ExtremaduraBox",
+    textClass: ".ExtremaduraLegendText",
+    provinceNodeList: ExtremaduraRegionNodeList,
+    lighterColourChange: "#3fd9ff",
+    strokeColour: "black",
+  },
+  CastileLaMancha: {
+    listClass: ".CastileLaManchaListItem",
+    boxId: "#CastileLaManchaBox",
+    textClass: ".CastileLaManchaLegendText",
+    provinceNodeList: CastileLaManchaRegionNodeList,
+    lighterColourChange: "#ffc1d3",
+    strokeColour: "black",
+  },
+  Valencia: {
+    listClass: ".ValenciaListItem",
+    boxId: "#ValenciaBox",
+    textClass: ".ValenciaLegendText",
+    provinceNodeList: ValenciaRegionNodeList,
+    lighterColourChange: "#547254",
+    strokeColour: "white",
+  },
+  Murcia: {
+    listClass: ".MurciaListItem",
+    boxId: "#MurciaBox",
+    textClass: ".MurciaLegendText",
+    provinceNodeList: MurciaRegionNodeList,
+    lighterColourChange: "#bd864f",
+    strokeColour: "black",
+  },
+  Andalusia: {
+    listClass: ".AndalusiaListItem",
+    boxId: "#AndalusiaBox",
+    textClass: ".AndalusiaLegendText",
+    provinceNodeList: AndalusiaRegionNodeList,
+    lighterColourChange: "#cc4444",
+    strokeColour: "white",
+  },
+};
+
 ////////////////////////////////////////// Legend Effect Function Creation /////////////////////////////////
 
 const LegendHoverEffects = function (
-  regionListItem = null,
-  regionBox = null,
-  regionLegendText = null,
-  regionNodeList = null,
-  lighterColourChange = null,
-  strokeColour = null
+  regionListItem,
+  regionBox,
+  regionLegendText,
+  regionNodeList,
+  lighterColourChange,
+  strokeColour
 ) {
   $(regionListItem).hover(
     function () {
@@ -62,142 +203,20 @@ const LegendHoverEffects = function (
   );
 };
 
-//////////////////////////////////////////////// Legend Effects Function Calls ////////////////////////////////////////
+//////////////////////////////////////////////// Legend Effects Function Calls in for loop ////////////////////////////////////////
 
-LegendHoverEffects(
-  ".GaliciaListItem",
-  "#GaliciaBox",
-  ".GaliciaLegendText",
-  GaliciaRegionNodeList,
-  "#26a626",
-  "white"
-);
+for (let i = 0; i < allRegions.length; i++) {
+  let region = allRegions[i];
 
-LegendHoverEffects(
-  ".AsturiasListItem",
-  "#AsturiasBox",
-  ".AsturiasLegendText",
-  AsturiasRegionNodeList,
-  "#ffa633",
-  "black"
-);
-
-LegendHoverEffects(
-  ".CantabriaListItem",
-  "#CantabriaBox",
-  ".CantabriaLegendText",
-  CantabriaRegionNodeList,
-  "#ff66ff",
-  "white"
-);
-
-LegendHoverEffects(
-  ".BasqueCountryListItem",
-  "#BasqueCountryBox",
-  ".BasqueCountryLegendText",
-  BasqueCountryRegionNodeList,
-  "#44c7bc",
-  "white"
-);
-
-LegendHoverEffects(
-  ".NavarraListItem",
-  "#NavarraBox",
-  ".NavarraLegendText",
-  NavarraRegionNodeList,
-  "#ffeac3",
-  "black"
-);
-
-LegendHoverEffects(
-  ".AragonListItem",
-  "#AragonBox",
-  ".AragonLegendText",
-  AragonRegionNodeList,
-  "#c05cff",
-  "white"
-);
-
-LegendHoverEffects(
-  ".CataloniaListItem",
-  "#CataloniaBox",
-  ".CataloniaLegendText",
-  CataloniaRegionNodeList,
-  "#f4626e",
-  "white"
-);
-
-LegendHoverEffects(
-  ".LaRiojaListItem",
-  "#LaRiojaBox",
-  ".LaRiojaLegendText",
-  LaRiojaRegionNodeList,
-  "#cdc6bf",
-  "#cdc6bf"
-);
-
-LegendHoverEffects(
-  ".CastileYLeonListItem",
-  "#CastileYLeonBox",
-  ".CastileYLeonLegendText",
-  CastileYLeonRegionNodeList,
-  "#635bd2",
-  "white"
-);
-
-LegendHoverEffects(
-  ".MadridListItem",
-  "#MadridBox",
-  ".MadridLegendText",
-  MadridRegionNodeList,
-  "#ffff33",
-  "black"
-);
-
-LegendHoverEffects(
-  ".ExtremaduraListItem",
-  "#ExtremaduraBox",
-  ".ExtremaduraLegendText",
-  ExtremaduraRegionNodeList,
-  "#3fd9ff",
-  "black"
-);
-
-LegendHoverEffects(
-  ".CastileLaManchaListItem",
-  "#CastileLaManchaBox",
-  ".CastileLaManchaLegendText",
-  CastileLaManchaRegionNodeList,
-  "#ffc1d3",
-  "black"
-);
-
-LegendHoverEffects(
-  ".ValenciaListItem",
-  "#ValenciaBox",
-  ".ValenciaLegendText",
-  ValenciaRegionNodeList,
-  "#547254",
-  "white"
-);
-
-LegendHoverEffects(
-  ".MurciaListItem",
-  "#MurciaBox",
-  ".MurciaLegendText",
-  MurciaRegionNodeList,
-  "#bd864f",
-  "black"
-);
-
-LegendHoverEffects(
-  ".AndalusiaListItem",
-  "#AndalusiaBox",
-  ".AndalusiaLegendText",
-  AndalusiaRegionNodeList,
-  "#cc4444",
-  "white"
-);
+  LegendHoverEffects(
+    regionsObj[region].listClass,
+    regionsObj[region].boxId,
+    regionsObj[region].textClass,
+    regionsObj[region].provinceNodeList,
+    regionsObj[region].lighterColourChange,
+    regionsObj[region].strokeColour
+  );
+}
 
 //////////////////////////////////////////// Map Hover Function Creation ////////////////////////////////////
 
@@ -224,18 +243,14 @@ const MapHoverEffects = function (
   );
 };
 
-MapHoverEffects(GaliciaRegionNodeList, "#26a626", "white");
-MapHoverEffects(AsturiasRegionNodeList, "#ffa633", "black");
-MapHoverEffects(CantabriaRegionNodeList, "#ff66ff", "white");
-MapHoverEffects(BasqueCountryRegionNodeList, "#44c7bc", "white");
-MapHoverEffects(NavarraRegionNodeList, "#ffeac3", "black");
-MapHoverEffects(AragonRegionNodeList, "#c05cff", "white");
-MapHoverEffects(LaRiojaRegionNodeList, "#cdc6bf", "");
-MapHoverEffects(CataloniaRegionNodeList, "#f4626e", "white");
-MapHoverEffects(CastileYLeonRegionNodeList, "#635bd2", "white");
-MapHoverEffects(MadridRegionNodeList, "#ffff33", "black");
-MapHoverEffects(ExtremaduraRegionNodeList, "#3fd9ff", "white");
-MapHoverEffects(CastileLaManchaRegionNodeList, "#ffc1d3", "black");
-MapHoverEffects(ValenciaRegionNodeList, "#547254", "white");
-MapHoverEffects(MurciaRegionNodeList, "#bd864f", "black");
-MapHoverEffects(AndalusiaRegionNodeList, "#cc4444", "white");
+////////////////////////////////// Map Hover effects function calls in for loop
+
+for (let i = 0; i < allRegions.length; i++) {
+  let region = allRegions[i];
+
+  MapHoverEffects(
+    regionsObj[region].provinceNodeList,
+    regionsObj[region].lighterColourChange,
+    regionsObj[region].strokeColour
+  );
+}

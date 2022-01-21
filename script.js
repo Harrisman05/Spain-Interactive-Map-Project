@@ -25,6 +25,9 @@ const ValenciaRegionNodeList = document.querySelectorAll(".ValenciaRegion");
 const MurciaRegionNodeList = document.querySelectorAll(".MurciaRegion");
 const AndalusiaRegionNodeList = document.querySelectorAll(".AndalusiaRegion");
 
+$(".tooltip").hide();
+$(".modalOverlay").hide();
+
 const allRegions = [
   "Galicia",
   "Asturias",
@@ -168,7 +171,7 @@ const regionsObj = {
 
 ////////////////////////////////////////// Legend Effect Function Creation /////////////////////////////////
 
-const LegendHoverEffects = function (
+const legendHoverEffects = function (
   regionListItem,
   regionBox,
   regionLegendText,
@@ -208,7 +211,7 @@ const LegendHoverEffects = function (
 for (let i = 0; i < allRegions.length; i++) {
   let region = allRegions[i];
 
-  LegendHoverEffects(
+  legendHoverEffects(
     regionsObj[region].listClass,
     regionsObj[region].boxId,
     regionsObj[region].textClass,
@@ -220,7 +223,7 @@ for (let i = 0; i < allRegions.length; i++) {
 
 //////////////////////////////////////////// Map Hover Function Creation ////////////////////////////////////
 
-const MapHoverEffects = function (
+const mapHoverEffects = function (
   regionNodeList,
   provinceFillColour,
   strokeColour
@@ -248,9 +251,45 @@ const MapHoverEffects = function (
 for (let i = 0; i < allRegions.length; i++) {
   let region = allRegions[i];
 
-  MapHoverEffects(
+  mapHoverEffects(
     regionsObj[region].provinceNodeList,
     regionsObj[region].lighterColourChange,
     regionsObj[region].strokeColour
   );
 }
+
+////////////////////////////////// Tooltip function on Map Hover
+
+const mapToolTipHover = function (regionNodeList) {
+  //https://stackoverflow.com/questions/42791168/how-to-make-tooltip-follow-cursor
+  $(regionNodeList).hover(
+    function () {
+      $(this).on("mousemove", (e) => {
+        $(".tooltip").show();
+        $(".tooltip").text(this.id); //https://stackoverflow.com/questions/30570638/get-id-attribute-from-a-node-in-nodelist
+
+        let xOffset = e.pageX;
+        let yOffset = 30 + e.pageY;
+
+        $(".tooltip").css({
+          left: xOffset,
+          top: yOffset,
+        });
+      });
+    },
+    function () {
+      $(".tooltip").hide();
+    }
+  );
+};
+
+///////////////////////////////// Tooltip function calls on all regions
+
+for (let i = 0; i < allRegions.length; i++) {
+  let region = allRegions[i];
+
+  mapToolTipHover(regionsObj[region].provinceNodeList);
+}
+$(".howToUseButton").click(function () {
+  $(".modalOverlay").show();
+});

@@ -2,10 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 body {
   background-color: rgb(239, 240, 219);
+}
+
+p {
+  font-size: 1.1vw;
 }
 
 .pageContainer {
@@ -16,7 +21,6 @@ body {
 
 .mapContainer {
   position: relative;
-  border: solid green 5px;
   width: 50vw;
   height: 100%;
 }
@@ -26,16 +30,165 @@ body {
   background-color: rgb(235, 210, 196);
   width: 50vw;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.introductionHeader {
+  display: flex;
+  justify-content: space-around;
+  font-size: clamp(30px, 2vw, 400px);
+  margin-top: 0.5vw;
+}
+
+.introductionText {
+  margin: 1vw 2vw 1vw 2vw;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.howToUseButton {
+  align-self: center;
+}
+
+.modalOverlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.5vw);
+  height: 95%;
+  width: 50%;
+  top: 0;
+  right: 0;
+}
+
+.modalFlexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.howToUseModal {
+  border-radius: 2.5vw;
+  width: 75%;
+  margin: 0 auto 0 auto;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  border: 5px rgb(203, 231, 255) solid;
+  background-color: rgb(203, 231, 255);
+  position: relative;
+}
+
+.closeModalButton {
+  position: absolute;
+  top: 0vw;
+  right: 0.9vw;
+  font-size: 2.8vw;
+  height: 1vw;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modalHeader > p {
+  margin-left: 1vw;
+  padding-bottom: 1vw;
+}
+
+.modalHeader > h3 {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  padding: 0.4vw 0 0.4vw 0;
+}
+
+.legendHowToUse {
+  border-top: 3px solid blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.howToUseH3 {
+  text-align: center;
+  padding: 0.4vw 0 0.4vw 0;
+  font-size: 1.5vw;
+}
+
+.legendHowToUse > ul > li:first-child {
+  list-style-type: none;
+}
+
+.modalSubContainer li {
+  padding: 0.4vw 0 0.4vw 0;
+  font-size: 0.9vw;
+}
+
+.legendHowToUse ul {
+  list-style-position: inside;
+  padding: 0.5vw;
+  font-size: 0.9vw;
+}
+
+.mapHowToUse {
+  border-top: 3px solid blue;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mapHowToUse > ul > li:first-child {
+  list-style-type: none;
+}
+
+/* original size: height 202px, width 731px, 3.61 ratio */
+.legendHoverGuide {
+  height: calc(width / 3.61);
+  width: 30vw;
+  align-self: center;
+  padding: 0.8vw 0 0.8vw 0;
+}
+
+.mapHoverGuide {
+  height: 10vw;
+  width: 10vw;
+  padding: 0.8vw 0 0.8vw 0;
+  margin-right: 1.3vw;
+}
+
+@media (max-width: 1566px) {
+  .spainFlagOuter {
+    display: none;
+  }
+}
+
+@media (max-width: 1192px) {
+  .spainFlagMiddle {
+    display: none;
+  }
+}
+
+@media (max-width: 826px) {
+  .spainFlagInner {
+    display: none;
+  }
 }
 
 .mapLegendContainer {
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 2.5%;
+  left: 2.5%;
   z-index: 10;
   background-color: white;
-  border: 1px black solid;
+  border: 0.2vw rgb(255, 0, 0) dotted;
   padding: 1vw;
+}
+
+.mapLegendHeader {
+  font-size: clamp(10px, 1.6vw, 22px);
+  white-space: nowrap;
+  padding: 0.2vh 0 0.2vh 0.2vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  font-weight: bold;
 }
 
 .mapLegendList {
@@ -47,6 +200,11 @@ body {
   white-space: nowrap;
   padding: 0.2vh 0 0.2vh 0.2vh;
   list-style-type: none;
+}
+
+.mapLegendList li:hover {
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .mapLegendBoxes {
@@ -61,7 +219,9 @@ body {
 
 svg {
   border: solid blue 5px;
-  background: rgb(210, 211, 243);
+  /* background: rgb(210, 211, 243); */
+  /* background: rgb(130, 134, 252); */
+  background: rgb(180, 183, 255);
   height: 100%;
   width: 100%;
   position: relative;
@@ -76,11 +236,17 @@ svg path {
 }
 
 svg path:hover {
-  fill: #000000;
-  stroke: #000000;
   transition: 0.6s;
   cursor: pointer;
-  /* 15% lighter */
+}
+
+.tooltip {
+  display: inline-block;
+  font-size: 15px;
+  position: fixed;
+  padding: 0.5em 1em;
+  background-color: #f1f1f1;
+  z-index: 50;
 }
 
 .GaliciaRegion {
@@ -91,8 +257,6 @@ svg path:hover {
 .GaliciaRegion:hover {
   fill: #26a626;
   stroke: #26a626;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 #GaliciaBox {
@@ -101,8 +265,6 @@ svg path:hover {
 
 .GaliciaListItem:hover {
   background-color: #26a626;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .AsturiasRegion {
@@ -110,7 +272,6 @@ svg path:hover {
   stroke: rgb(255, 115, 0);
 }
 .AsturiasRegion:hover {
-  /* 15% lighter */
   fill: #ffa633;
   stroke: #ffa633;
 }
@@ -121,8 +282,6 @@ svg path:hover {
 
 .AsturiasListItem:hover {
   background-color: #ffa633;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .CantabriaRegion {
@@ -141,8 +300,6 @@ svg path:hover {
 
 .CantabriaListItem:hover {
   background-color: #ff66ff;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .BasqueCountryRegion {
@@ -161,8 +318,6 @@ svg path:hover {
 
 .BasqueCountryListItem:hover {
   background-color: #44c7bc;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .NavarraRegion {
@@ -181,8 +336,6 @@ svg path:hover {
 
 .NavarraListItem:hover {
   background-color: #ffeac3;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .AragonRegion {
@@ -201,8 +354,6 @@ svg path:hover {
 
 .AragonListItem:hover {
   background-color: #c05cff;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .CataloniaRegion {
@@ -221,8 +372,6 @@ svg path:hover {
 
 .CataloniaListItem:hover {
   background-color: #f4626e;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .LaRiojaRegion {
@@ -241,8 +390,6 @@ svg path:hover {
 
 .LaRiojaListItem:hover {
   background-color: #cdc6bf;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .CastileYLeonRegion {
@@ -261,8 +408,6 @@ svg path:hover {
 
 .CastileYLeonListItem:hover {
   background-color: #635bd2;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .MadridRegion {
@@ -281,8 +426,6 @@ svg path:hover {
 
 .MadridListItem:hover {
   background-color: #ffff33;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .ExtremaduraRegion {
@@ -301,8 +444,6 @@ svg path:hover {
 
 .ExtremaduraListItem:hover {
   background-color: #3fd9ff;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .CastileLaManchaRegion {
@@ -321,8 +462,6 @@ svg path:hover {
 
 .CastileLaManchaListItem:hover {
   background-color: #ffc1d3;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .ValenciaRegion {
@@ -341,8 +480,6 @@ svg path:hover {
 
 .ValenciaListItem:hover {
   background-color: #547254;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .MurciaRegion {
@@ -361,8 +498,6 @@ svg path:hover {
 
 .MurciaListItem:hover {
   background-color: #bd864f;
-  transition: 0.6s;
-  cursor: pointer;
 }
 
 .AndalusiaRegion {
@@ -381,6 +516,4 @@ svg path:hover {
 
 .AndalusiaListItem:hover {
   background-color: #cc4444;
-  transition: 0.6s;
-  cursor: pointer;
 }

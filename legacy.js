@@ -157,3 +157,15 @@
 // MapHoverEffects(ValenciaRegionNodeList, "#547254", "white");
 // MapHoverEffects(MurciaRegionNodeList, "#bd864f", "black");
 // MapHoverEffects(AndalusiaRegionNodeList, "#cc4444", "white");
+
+// $(".mapContainer").on("mousemove", (e) => {
+//   $("#log").text("pageX: " + e.pageX + ", pageY; " + e.pageY);
+
+//   let xOffset = 15 + e.pageX;
+//   let yOffset = 15 + e.pageY;
+
+//   $(".tooltip").css({
+//     left: xOffset,
+//     top: yOffset,
+//   });
+// });

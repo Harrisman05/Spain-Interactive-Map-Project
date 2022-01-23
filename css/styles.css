@@ -518,3 +518,41 @@ svg path:hover {
 .AndalusiaListItem:hover {
   background-color: #cc4444;
 }
+
+.BalearesIslands {
+  fill: #4d801d;
+  stroke: #3d2b1f;
+  stroke-width: 2;
+}
+
+.BalearesIslands:hover {
+  fill: #cc4444;
+  stroke: #cc4444;
+}
+
+#BalearesIslandsBox {
+  background-color: rgb(153, 17, 17);
+}
+
+.BalearesIslandsListItem:hover {
+  background-color: #cc4444;
+}
+
+.CanaryIslands {
+  fill: #4d801d;
+  stroke: #3d2b1f;
+  stroke-width: 2;
+}
+
+.CanaryIslands:hover {
+  fill: #cc4444;
+  stroke: #cc4444;
+}
+
+#CanaryIslandsBox {
+  background-color: rgb(153, 17, 17);
+}
+
+.CanaryIslandsListItem:hover {
+  background-color: #cc4444;
+}

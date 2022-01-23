@@ -21,14 +21,15 @@ p {
 
 .mapContainer {
   position: relative;
-  width: 50vw;
+  width: 55vw;
   height: 100%;
+  background: rgb(180, 183, 255);
 }
 
 .textContainer {
   border: solid purple 5px;
   background-color: rgb(235, 210, 196);
-  width: 50vw;
+  width: 45vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -57,7 +58,7 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(0.5vw);
   height: 95%;
-  width: 50%;
+  width: 45%;
   top: 0;
   right: 0;
 }
@@ -71,7 +72,7 @@ p {
 
 .howToUseModal {
   border-radius: 2.5vw;
-  width: 75%;
+  width: 80%;
   margin: 0 auto 0 auto;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   border: 5px rgb(203, 231, 255) solid;
@@ -131,7 +132,7 @@ p {
 }
 
 .mapHowToUse {
-  border-top: 3px solid blue;
+  border-top: 3px solid rgb(47, 0, 255);
   display: flex;
   justify-content: space-evenly;
 }
@@ -152,7 +153,7 @@ p {
   height: 10vw;
   width: 10vw;
   padding: 0.8vw 0 0.8vw 0;
-  margin-right: 1.3vw;
+  margin-right: 1.1vw;
 }
 
 @media (max-width: 1566px) {
@@ -181,10 +182,22 @@ p {
   background-color: white;
   border: 0.2vw rgb(255, 0, 0) dotted;
   padding: 1vw;
+  max-width: 22%;
+}
+
+.BalearesIslandsLegendContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+  border: 0.2vw rgb(255, 0, 0) dotted;
+  padding: 1vw;
+  font-size: 0.9vw;
 }
 
 .mapLegendHeader {
-  font-size: clamp(10px, 1.6vw, 22px);
+  font-size: clamp(6px, 1.6vw, 22px);
   white-space: nowrap;
   padding: 0.2vh 0 0.2vh 0.2vh;
   margin-bottom: 1vh;
@@ -197,7 +210,7 @@ p {
 }
 
 .mapLegendList li {
-  font-size: 1.1vw;
+  font-size: 0.9vw;
   white-space: nowrap;
   padding: 0.2vh 0 0.2vh 0.2vh;
   list-style-type: none;
@@ -219,11 +232,9 @@ p {
 }
 
 svg {
-  border: solid blue 5px;
-  /* background: rgb(210, 211, 243); */
-  /* background: rgb(130, 134, 252); */
+  border: solid rgb(5, 175, 197) 5px;
   background: rgb(180, 183, 255);
-  height: 100%;
+  max-height: 100%;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -538,21 +549,78 @@ svg path:hover {
   background-color: #cc4444;
 }
 
-.CanaryIslands {
-  fill: #4d801d;
-  stroke: #3d2b1f;
+.ProvinceOfSantaCruzDeTenerife {
+  fill: #cc1a73;
+  stroke: #000000;
   stroke-width: 2;
 }
 
-.CanaryIslands:hover {
+.ProvinceOfSantaCruzDeTenerife:hover {
   fill: #cc4444;
   stroke: #cc4444;
 }
 
-#CanaryIslandsBox {
+#ProvinceOfSantaCruzDeTenerifeBox {
   background-color: rgb(153, 17, 17);
 }
 
-.CanaryIslandsListItem:hover {
+.ProvinceOfSantaCruzDeTenerifeListItem:hover {
+  background-color: #cc4444;
+}
+
+.ProvinceOfLasPalmas {
+  fill: #cc941a;
+  stroke: #000000;
+  stroke-width: 2;
+}
+
+.ProvinceOfLasPalmas:hover {
+  fill: #cc4444;
+  stroke: #cc4444;
+}
+
+#ProvinceOfLasPalmasBox {
+  background-color: rgb(153, 17, 17);
+}
+
+.ProvinceOfLasPalmasListItem:hover {
+  background-color: #cc4444;
+}
+
+.Ceuta {
+  fill: #80d0f0;
+  stroke: #000000;
+  stroke-width: 2;
+}
+
+.Ceuta:hover {
+  fill: #cc4444;
+  stroke: #cc4444;
+}
+
+#CeutaBox {
+  background-color: rgb(153, 17, 17);
+}
+
+.CeutaListItem:hover {
+  background-color: #cc4444;
+}
+
+.Melilla {
+  fill: #ce75e9;
+  stroke: #000000;
+  stroke-width: 2;
+}
+
+.Melilla:hover {
+  fill: #cc4444;
+  stroke: #cc4444;
+}
+
+#MelillaBox {
+  background-color: rgb(153, 17, 17);
+}
+
+.MelillaListItem:hover {
   background-color: #cc4444;
 }

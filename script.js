@@ -290,6 +290,32 @@ for (let i = 0; i < allRegions.length; i++) {
 
   mapToolTipHover(regionsObj[region].provinceNodeList);
 }
-$(".howToUseButton").click(function () {
-  $(".modalOverlay").show();
-});
+
+//////////////////////////////////// Open and Closing of Modal
+
+const showAndCloseModal = function () {
+  $(".howToUseButton").click(function () {
+    $(".modalOverlay").show();
+
+    $(".mapContainer").click(function () {
+      $(".modalOverlay").hide();
+    });
+
+    window.onclick = function (e) {
+      if (
+        e.target.className === "modalFlexContainer" ||
+        e.target.className === "closeModalButton"
+      ) {
+        $(".modalOverlay").hide();
+      }
+    };
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        $(".modalOverlay").hide();
+      }
+    });
+  });
+};
+
+showAndCloseModal();

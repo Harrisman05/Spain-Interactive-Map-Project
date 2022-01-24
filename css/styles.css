@@ -625,3 +625,10 @@ svg path:hover {
 .EnclavesListItem:hover {
   background-color: #67dfff;
 }
+
+rect {
+  fill: transparent;
+  stroke-width: 3;
+  stroke: rgb(0, 0, 0);
+  stroke-dasharray: 4;
+}

@@ -58,6 +58,13 @@ const allRegions = [
   "Enclaves",
 ];
 
+const islandsAndEnclaves = [
+  "BalearicIslands",
+  "ProvincesOfLasPalmas",
+  "ProvincesOfSantaCruzDeTenerife",
+  "Enclaves",
+];
+
 const regionsObj = {
   Galicia: {
     listClass: ".GaliciaListItem",
@@ -186,6 +193,7 @@ const regionsObj = {
     provinceNodeList: BalearicIslandsNodeList,
     lighterColourChange: "#80b350",
     strokeColour: "#3d2b1f",
+    islandRect: ".BalearicRect",
   },
   ProvincesOfLasPalmas: {
     listClass: ".ProvincesOfLasPalmasListItem",
@@ -194,6 +202,7 @@ const regionsObj = {
     provinceNodeList: ProvincesOfLasPalmasNodeList,
     lighterColourChange: "#ffc74d",
     strokeColour: "#000000",
+    islandRect: ".GranCanariaRect",
   },
   ProvincesOfSantaCruzDeTenerife: {
     listClass: ".ProvincesOfSantaCruzDeTenerifeListItem",
@@ -202,6 +211,7 @@ const regionsObj = {
     provinceNodeList: ProvincesOfSantaCruzDeTenerifeNodeList,
     lighterColourChange: "#ff4da6",
     strokeColour: "#000000",
+    islandRect: ".GranCanariaRect",
   },
   Enclaves: {
     listClass: ".EnclavesListItem",
@@ -210,6 +220,7 @@ const regionsObj = {
     provinceNodeList: EnclavesNodeList,
     lighterColourChange: "#67dfff",
     strokeColour: "#000000",
+    islandRect: ".CeutaMelillaRect",
   },
 };
 
@@ -221,7 +232,8 @@ const legendHoverEffects = function (
   regionLegendText,
   regionNodeList,
   lighterColourChange,
-  strokeColour
+  strokeColour,
+  islandRect = null
 ) {
   $(regionListItem).hover(
     function () {
@@ -236,6 +248,7 @@ const legendHoverEffects = function (
         element.style.stroke = strokeColour;
         element.style.transition = "0.6s";
       });
+      $(islandRect).css("stroke", "red"); // only works for islands as default parameter is none
     },
     function () {
       console.log("Hovering elsewhere");
@@ -246,6 +259,7 @@ const legendHoverEffects = function (
         element.style.stroke = ""; // set fill and stroke to nothing so orignal mouse hovering on map is not overwritten - GENIUS - https://stackoverflow.com/questions/4252496/jquery-hover-overwrite-the-css-ahover-color
         element.style.transition = "0.6s";
       });
+      $(islandRect).css("stroke", "black");
     }
   );
 };
@@ -261,7 +275,8 @@ for (let i = 0; i < allRegions.length; i++) {
     regionsObj[region].textClass,
     regionsObj[region].provinceNodeList,
     regionsObj[region].lighterColourChange,
-    regionsObj[region].strokeColour
+    regionsObj[region].strokeColour,
+    regionsObj[region].islandRect
   );
 }
 
@@ -298,7 +313,8 @@ for (let i = 0; i < allRegions.length; i++) {
   mapHoverEffects(
     regionsObj[region].provinceNodeList,
     regionsObj[region].lighterColourChange,
-    regionsObj[region].strokeColour
+    regionsObj[region].strokeColour,
+    regionsObj[region].islandRect
   );
 }
 
@@ -363,3 +379,38 @@ const showAndCloseModal = function () {
 };
 
 showAndCloseModal();
+
+////////////////////////////////// Highlighting Island/Enclave Boxes on Map
+
+const boxHighlightHover = function (box, nodelist) {
+  $(box).hover(
+    function () {
+      $(box).css("stroke", "red");
+      nodelist.forEach((element) => {
+        $(`[id='${element.id}']`).hover(
+          // https://stackoverflow.com/questions/596314/jquery-ids-with-spaces - ids with spaces are illegal, had to break code regulations slightly here
+          function () {
+            $(box).css("stroke", "red");
+          },
+          function () {
+            $(box).css("stroke", "black");
+          }
+        );
+      });
+    },
+    function () {
+      $(box).css("stroke", "black");
+    }
+  );
+};
+
+for (let i = 0; i < islandsAndEnclaves.length; i++) {
+  let boxRegion = islandsAndEnclaves[i];
+  console.log(regionsObj[boxRegion].islandRect);
+  console.log(regionsObj[boxRegion].provinceNodeList);
+
+  boxHighlightHover(
+    regionsObj[boxRegion].islandRect,
+    regionsObj[boxRegion].provinceNodeList
+  );
+}

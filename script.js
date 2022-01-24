@@ -24,6 +24,14 @@ const CastileLaManchaRegionNodeList = document.querySelectorAll(
 const ValenciaRegionNodeList = document.querySelectorAll(".ValenciaRegion");
 const MurciaRegionNodeList = document.querySelectorAll(".MurciaRegion");
 const AndalusiaRegionNodeList = document.querySelectorAll(".AndalusiaRegion");
+const BalearicIslandsNodeList = document.querySelectorAll(".BalearicIslands");
+const ProvincesOfLasPalmasNodeList = document.querySelectorAll(
+  ".ProvincesOfLasPalmas"
+);
+const ProvincesOfSantaCruzDeTenerifeNodeList = document.querySelectorAll(
+  ".ProvincesOfSantaCruzDeTenerife"
+);
+const EnclavesNodeList = document.querySelectorAll(".Enclaves");
 
 $(".tooltip").hide();
 $(".modalOverlay").hide();
@@ -44,6 +52,10 @@ const allRegions = [
   "Valencia",
   "Murcia",
   "Andalusia",
+  "BalearicIslands",
+  "ProvincesOfLasPalmas",
+  "ProvincesOfSantaCruzDeTenerife",
+  "Enclaves",
 ];
 
 const regionsObj = {
@@ -166,6 +178,38 @@ const regionsObj = {
     provinceNodeList: AndalusiaRegionNodeList,
     lighterColourChange: "#cc4444",
     strokeColour: "white",
+  },
+  BalearicIslands: {
+    listClass: ".BalearicIslandsListItem",
+    boxId: "#BalearicIslandsBox",
+    textClass: ".BalearicIslandsLegendText",
+    provinceNodeList: BalearicIslandsNodeList,
+    lighterColourChange: "#80b350",
+    strokeColour: "#3d2b1f",
+  },
+  ProvincesOfLasPalmas: {
+    listClass: ".ProvincesOfLasPalmasListItem",
+    boxId: "#ProvincesOfLasPalmasBox",
+    textClass: ".ProvincesOfLasPalmasLegendText",
+    provinceNodeList: ProvincesOfLasPalmasNodeList,
+    lighterColourChange: "#ffc74d",
+    strokeColour: "#000000",
+  },
+  ProvincesOfSantaCruzDeTenerife: {
+    listClass: ".ProvincesOfSantaCruzDeTenerifeListItem",
+    boxId: "#ProvincesOfSantaCruzDeTenerifeBox",
+    textClass: ".ProvincesOfSantaCruzDeTenerifeLegendText",
+    provinceNodeList: ProvincesOfSantaCruzDeTenerifeNodeList,
+    lighterColourChange: "#ff4da6",
+    strokeColour: "#000000",
+  },
+  Enclaves: {
+    listClass: ".EnclavesListItem",
+    boxId: "#EnclavesBox",
+    textClass: ".EnclavesLegendText",
+    provinceNodeList: EnclavesNodeList,
+    lighterColourChange: "#67dfff",
+    strokeColour: "#000000",
   },
 };
 

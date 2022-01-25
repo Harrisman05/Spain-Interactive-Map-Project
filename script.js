@@ -115,154 +115,154 @@ const allProvinces = [
 
 const ProvincesObj = {
   Álava: {
-    population: 0,
+    population: 333626,
   },
   Albacete: {
-    population: 0,
+    population: 386464,
   },
   Alicante: {
-    population: 0,
+    population: 1881762,
   },
   Almería: {
-    population: 0,
+    population: 731792,
   },
   Asturias: {
-    population: 0,
+    population: 1011792,
   },
   Ávila: {
-    population: 0,
+    population: 158421,
   },
   Badajoz: {
-    population: 0,
+    population: 669943,
   },
   BalearicIslands: {
-    population: 0,
+    population: 1173008,
   },
   Barcelona: {
-    population: 0,
+    population: 5714730,
   },
   Bizkaia: {
-    population: 0,
+    population: 1154334,
   },
   Burgos: {
-    population: 0,
+    population: 356055,
   },
   Cáceres: {
-    population: 0,
+    population: 389558,
   },
   Cádiz: {
-    population: 0,
+    population: 1245960,
   },
   Cantabria: {
-    population: 0,
+    population: 584507,
   },
   Castellón: {
-    population: 0,
+    population: 587064,
   },
   CiudadReal: {
-    population: 0,
+    population: 492591,
   },
   Córdoba: {
-    population: 0,
+    population: 776789,
   },
   Cuenca: {
-    population: 0,
+    population: 195516,
   },
   Gipuzkoa: {
-    population: 0,
+    population: 726033,
   },
   Gerona: {
-    population: 0,
+    population: 786596,
   },
   Granada: {
-    population: 0,
+    population: 921338,
   },
   Guadalajara: {
-    population: 0,
+    population: 265588,
   },
   Huelva: {
-    population: 0,
+    population: 525835,
   },
   Huesca: {
-    population: 0,
+    population: 224264,
   },
   Jaén: {
-    population: 0,
+    population: 627190,
   },
   LaCoruña: {
-    population: 0,
+    population: 1120134,
   },
   LaRioja: {
-    population: 0,
+    population: 319796,
   },
   LasPalmas: {
-    population: 0,
+    population: 1128539,
   },
   León: {
-    population: 0,
+    population: 451706,
   },
   Lérida: {
-    population: 0,
+    population: 439727,
   },
   Lugo: {
-    population: 0,
+    population: 326013,
   },
   Madrid: {
-    population: 0,
+    population: 6751251,
   },
   Málaga: {
-    population: 0,
+    population: 1695651,
   },
   Murcia: {
-    population: 0,
+    population: 1518486,
   },
   Navarre: {
-    population: 0,
+    population: 661537,
   },
   Orense: {
-    population: 0,
+    population: 305223,
   },
   Palencia: {
-    population: 0,
+    population: 159123,
   },
   Pontevedra: {
-    population: 0,
+    population: 944275,
   },
   Salamanca: {
-    population: 0,
+    population: 327338,
   },
   SantaCruzdeTenerife: {
-    population: 0,
+    population: 1044405,
   },
   Segovia: {
-    population: 0,
+    population: 153663,
   },
   Seville: {
-    population: 0,
+    population: 1947852,
   },
   Soria: {
-    population: 0,
+    population: 88747,
   },
   Tarragona: {
-    population: 0,
+    population: 822309,
   },
   Teruel: {
-    population: 0,
+    population: 134545,
   },
   Toledo: {
-    population: 0,
+    population: 709403,
   },
   Valencia: {
-    population: 0,
+    population: 2589312,
   },
   Valladolid: {
-    population: 0,
+    population: 519361,
   },
   Zamora: {
-    population: 0,
+    population: 168725,
   },
   Zaragoza: {
-    population: 0,
+    population: 967452,
   },
 };
 
@@ -283,6 +283,7 @@ const regionsObj = {
     provinceNodeList: GaliciaRegionNodeList,
     lighterColourChange: "#26a626",
     strokeColour: "white",
+    population: 2695645,
   },
   Asturias: {
     listClass: ".AsturiasListItem",
@@ -291,6 +292,7 @@ const regionsObj = {
     provinceNodeList: AsturiasRegionNodeList,
     lighterColourChange: "#ffa633",
     strokeColour: "black",
+    population: 1011792,
   },
   Cantabria: {
     listClass: ".CantabriaListItem",
@@ -299,6 +301,7 @@ const regionsObj = {
     provinceNodeList: CantabriaRegionNodeList,
     lighterColourChange: "#ff66ff",
     strokeColour: "white",
+    population: 584507,
   },
   BasqueCountry: {
     listClass: ".BasqueCountryListItem",
@@ -307,6 +310,7 @@ const regionsObj = {
     provinceNodeList: BasqueCountryRegionNodeList,
     lighterColourChange: "#44c7bc",
     strokeColour: "white",
+    population: 2213993,
   },
   Navarra: {
     listClass: ".NavarraListItem",
@@ -315,6 +319,7 @@ const regionsObj = {
     provinceNodeList: NavarraRegionNodeList,
     lighterColourChange: "#ffeac3",
     strokeColour: "black",
+    population: 661537,
   },
   Aragon: {
     listClass: ".AragonListItem",
@@ -323,6 +328,7 @@ const regionsObj = {
     provinceNodeList: AragonRegionNodeList,
     lighterColourChange: "#c05cff",
     strokeColour: "white",
+    population: 1326261,
   },
   Catalonia: {
     listClass: ".CataloniaListItem",
@@ -331,6 +337,7 @@ const regionsObj = {
     provinceNodeList: CataloniaRegionNodeList,
     lighterColourChange: "#f4626e",
     strokeColour: "white",
+    population: 7763362,
   },
   LaRioja: {
     listClass: ".LaRiojaListItem",
@@ -339,6 +346,7 @@ const regionsObj = {
     provinceNodeList: LaRiojaRegionNodeList,
     lighterColourChange: "#cdc6bf",
     strokeColour: "#cdc6bf",
+    population: 319796,
   },
   CastileYLeon: {
     listClass: ".CastileYLeonListItem",
@@ -347,6 +355,7 @@ const regionsObj = {
     provinceNodeList: CastileYLeonRegionNodeList,
     lighterColourChange: "#635bd2",
     strokeColour: "white",
+    population: 2383139,
   },
   Madrid: {
     listClass: ".MadridListItem",
@@ -355,6 +364,7 @@ const regionsObj = {
     provinceNodeList: MadridRegionNodeList,
     lighterColourChange: "#ffff33",
     strokeColour: "black",
+    population: 6751251,
   },
   Extremadura: {
     listClass: ".ExtremaduraListItem",
@@ -363,6 +373,7 @@ const regionsObj = {
     provinceNodeList: ExtremaduraRegionNodeList,
     lighterColourChange: "#3fd9ff",
     strokeColour: "black",
+    population: 1059501,
   },
   CastileLaMancha: {
     listClass: ".CastileLaManchaListItem",
@@ -371,6 +382,7 @@ const regionsObj = {
     provinceNodeList: CastileLaManchaRegionNodeList,
     lighterColourChange: "#ffc1d3",
     strokeColour: "black",
+    population: 2049562,
   },
   Valencia: {
     listClass: ".ValenciaListItem",
@@ -379,6 +391,7 @@ const regionsObj = {
     provinceNodeList: ValenciaRegionNodeList,
     lighterColourChange: "#547254",
     strokeColour: "white",
+    population: 5058138,
   },
   Murcia: {
     listClass: ".MurciaListItem",
@@ -387,6 +400,7 @@ const regionsObj = {
     provinceNodeList: MurciaRegionNodeList,
     lighterColourChange: "#bd864f",
     strokeColour: "black",
+    population: 1518486,
   },
   Andalusia: {
     listClass: ".AndalusiaListItem",
@@ -395,6 +409,7 @@ const regionsObj = {
     provinceNodeList: AndalusiaRegionNodeList,
     lighterColourChange: "#cc4444",
     strokeColour: "white",
+    population: 8472407,
   },
   BalearicIslands: {
     listClass: ".BalearicIslandsListItem",
@@ -404,6 +419,7 @@ const regionsObj = {
     lighterColourChange: "#80b350",
     strokeColour: "#3d2b1f",
     islandRect: ".BalearicRect",
+    population: 1173008,
   },
   ProvincesOfLasPalmas: {
     listClass: ".ProvincesOfLasPalmasListItem",
@@ -413,6 +429,7 @@ const regionsObj = {
     lighterColourChange: "#ffc74d",
     strokeColour: "#000000",
     islandRect: ".GranCanariaRect",
+    population: 1128539,
   },
   ProvincesOfSantaCruzDeTenerife: {
     listClass: ".ProvincesOfSantaCruzDeTenerifeListItem",
@@ -422,6 +439,7 @@ const regionsObj = {
     lighterColourChange: "#FF67C0",
     strokeColour: "#000000",
     islandRect: ".GranCanariaRect",
+    population: 1044405,
   },
   Enclaves: {
     listClass: ".EnclavesListItem",
@@ -431,6 +449,7 @@ const regionsObj = {
     lighterColourChange: "#67dfff",
     strokeColour: "#000000",
     islandRect: ".CeutaMelillaRect",
+    population: 0,
   },
 };
 

@@ -58,6 +58,216 @@ const allRegions = [
   "Enclaves",
 ];
 
+const allProvinces = [
+  "Álava",
+  "Albacete",
+  "Alicante",
+  "Almería",
+  "Asturias",
+  "Ávila",
+  "Badajoz",
+  "BalearicIslands",
+  "Barcelona",
+  "Bizkaia",
+  "Burgos",
+  "Cáceres",
+  "Cádiz",
+  "Cantabria",
+  "Castellón",
+  "CiudadReal",
+  "Córdoba",
+  "Cuenca",
+  "Gipuzkoa",
+  "Gerona",
+  "Granada",
+  "Guadalajara",
+  "Huelva",
+  "Huesca",
+  "Jaén",
+  "LaCoruña",
+  "LaRioja",
+  "LasPalmas",
+  "León",
+  "Lérida",
+  "Lugo",
+  "Madrid",
+  "Málaga",
+  "Murcia",
+  "Navarre",
+  "Orense",
+  "Palencia",
+  "Pontevedra",
+  "Salamanca",
+  "SantaCruzdeTenerife",
+  "Segovia",
+  "Seville",
+  "Soria",
+  "Tarragona",
+  "Teruel",
+  "Toledo",
+  "Valencia",
+  "Valladolid",
+  "Zamora",
+  "Zaragoza",
+];
+
+// console.log(allProvinces.length);
+
+const ProvincesObj = {
+  Álava: {
+    population: 0,
+  },
+  Albacete: {
+    population: 0,
+  },
+  Alicante: {
+    population: 0,
+  },
+  Almería: {
+    population: 0,
+  },
+  Asturias: {
+    population: 0,
+  },
+  Ávila: {
+    population: 0,
+  },
+  Badajoz: {
+    population: 0,
+  },
+  BalearicIslands: {
+    population: 0,
+  },
+  Barcelona: {
+    population: 0,
+  },
+  Bizkaia: {
+    population: 0,
+  },
+  Burgos: {
+    population: 0,
+  },
+  Cáceres: {
+    population: 0,
+  },
+  Cádiz: {
+    population: 0,
+  },
+  Cantabria: {
+    population: 0,
+  },
+  Castellón: {
+    population: 0,
+  },
+  CiudadReal: {
+    population: 0,
+  },
+  Córdoba: {
+    population: 0,
+  },
+  Cuenca: {
+    population: 0,
+  },
+  Gipuzkoa: {
+    population: 0,
+  },
+  Gerona: {
+    population: 0,
+  },
+  Granada: {
+    population: 0,
+  },
+  Guadalajara: {
+    population: 0,
+  },
+  Huelva: {
+    population: 0,
+  },
+  Huesca: {
+    population: 0,
+  },
+  Jaén: {
+    population: 0,
+  },
+  LaCoruña: {
+    population: 0,
+  },
+  LaRioja: {
+    population: 0,
+  },
+  LasPalmas: {
+    population: 0,
+  },
+  León: {
+    population: 0,
+  },
+  Lérida: {
+    population: 0,
+  },
+  Lugo: {
+    population: 0,
+  },
+  Madrid: {
+    population: 0,
+  },
+  Málaga: {
+    population: 0,
+  },
+  Murcia: {
+    population: 0,
+  },
+  Navarre: {
+    population: 0,
+  },
+  Orense: {
+    population: 0,
+  },
+  Palencia: {
+    population: 0,
+  },
+  Pontevedra: {
+    population: 0,
+  },
+  Salamanca: {
+    population: 0,
+  },
+  SantaCruzdeTenerife: {
+    population: 0,
+  },
+  Segovia: {
+    population: 0,
+  },
+  Seville: {
+    population: 0,
+  },
+  Soria: {
+    population: 0,
+  },
+  Tarragona: {
+    population: 0,
+  },
+  Teruel: {
+    population: 0,
+  },
+  Toledo: {
+    population: 0,
+  },
+  Valencia: {
+    population: 0,
+  },
+  Valladolid: {
+    population: 0,
+  },
+  Zamora: {
+    population: 0,
+  },
+  Zaragoza: {
+    population: 0,
+  },
+};
+
+// console.log(Object.keys(ProvincesObj).length);
+
 const islandsAndEnclaves = [
   "BalearicIslands",
   "ProvincesOfLasPalmas",
@@ -209,7 +419,7 @@ const regionsObj = {
     boxId: "#ProvincesOfSantaCruzDeTenerifeBox",
     textClass: ".ProvincesOfSantaCruzDeTenerifeLegendText",
     provinceNodeList: ProvincesOfSantaCruzDeTenerifeNodeList,
-    lighterColourChange: "#ff4da6",
+    lighterColourChange: "#FF67C0",
     strokeColour: "#000000",
     islandRect: ".GranCanariaRect",
   },

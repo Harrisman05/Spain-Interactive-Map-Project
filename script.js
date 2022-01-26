@@ -26,14 +26,19 @@ const ValencianCommunityRegionNodeList = document.querySelectorAll(
 );
 const MurciaRegionNodeList = document.querySelectorAll(".MurciaRegion");
 const AndalusiaRegionNodeList = document.querySelectorAll(".AndalusiaRegion");
-const BalearicIslandsNodeList = document.querySelectorAll(".BalearicIslands");
+const BalearicIslandsNodeList = document.querySelectorAll(
+  ".BalearicIslandsRegion"
+);
 const ProvincesOfLasPalmasNodeList = document.querySelectorAll(
-  ".ProvincesOfLasPalmas"
+  ".ProvincesOfLasPalmasRegion"
 );
 const ProvincesOfSantaCruzDeTenerifeNodeList = document.querySelectorAll(
-  ".ProvincesOfSantaCruzDeTenerife"
+  ".ProvincesOfSantaCruzDeTenerifeRegion"
 );
 const EnclavesNodeList = document.querySelectorAll(".Enclaves");
+// const mapLegendList = document
+//   .getElementById("mapLegendList")
+//   .getElementsByTagName("li");
 
 $(".tooltip").hide();
 $(".modalOverlay").hide();
@@ -61,30 +66,30 @@ const allRegionsMap = [
 ];
 
 const allProvincesAndRegionsInfoArr = [
-  "Álava",
+  "Alava",
   "Albacete",
   "Alicante",
-  "Almería",
+  "Almeria",
   "Andalusia",
   "Aragon",
   "Asturias",
-  "Ávila",
+  "Avila",
   "Badajoz",
   "BalearicIslands",
   "Barcelona",
   "BasqueCountry",
   "Bizkaia",
   "Burgos",
-  "Cáceres",
-  "Cádiz",
+  "Caceres",
+  "Cadiz",
   "Cantabria",
-  "Castellón",
+  "Castellon",
   "CastileLaMancha",
   "CastileYLeon",
   "Catalonia",
   "Ceuta",
   "CiudadReal",
-  "Córdoba",
+  "Cordoba",
   "Cuenca",
   "Extremadura",
   "Galicia",
@@ -94,16 +99,16 @@ const allProvincesAndRegionsInfoArr = [
   "Guadalajara",
   "Huelva",
   "Huesca",
-  "Jaén",
-  "LaCoruña",
+  "Jaen",
+  "LaCoruna",
   "LaRioja",
   "ProvincesOfLasPalmas",
   "ProvincesOfSantaCruzdeTenerife",
-  "León",
-  "Lérida",
+  "Leon",
+  "Lerida",
   "Lugo",
   "Madrid",
-  "Málaga",
+  "Malaga",
   "Melilla",
   "Murcia",
   "Navarre",
@@ -127,7 +132,7 @@ const allProvincesAndRegionsInfoArr = [
 console.log(allProvincesAndRegionsInfoArr.length);
 
 const allProvincesAndRegionsInfoObj = {
-  Álava: {
+  Alava: {
     population: "333,626",
     area: "3,038 km²",
   },
@@ -139,7 +144,7 @@ const allProvincesAndRegionsInfoObj = {
     population: "1,881,762",
     area: "5,817 km²",
   },
-  Almería: {
+  Almeria: {
     population: "731,792",
     area: "8,775 km²",
   },
@@ -155,7 +160,7 @@ const allProvincesAndRegionsInfoObj = {
     population: "1,011,792",
     area: "10,604 km²",
   },
-  Ávila: {
+  Avila: {
     population: "158,421",
     area: "8,050 km²",
   },
@@ -183,11 +188,11 @@ const allProvincesAndRegionsInfoObj = {
     population: "356,055",
     area: "14,291 km²",
   },
-  Cáceres: {
+  Caceres: {
     population: "389,558",
     area: "19,868 km²",
   },
-  Cádiz: {
+  Cadiz: {
     population: "1,245,960",
     area: "7,436 km²",
   },
@@ -195,7 +200,7 @@ const allProvincesAndRegionsInfoObj = {
     population: "584,507",
     area: "5,321 km²",
   },
-  Castellón: {
+  Castellon: {
     population: "587,064",
     area: "6,632 km²",
   },
@@ -219,7 +224,7 @@ const allProvincesAndRegionsInfoObj = {
     population: "492,591",
     area: "19,813 km²",
   },
-  Córdoba: {
+  Cordoba: {
     population: "776,789",
     area: "13,771 km²",
   },
@@ -259,11 +264,11 @@ const allProvincesAndRegionsInfoObj = {
     population: "1,059,501",
     area: "41,635 km²",
   },
-  Jaén: {
+  Jaen: {
     population: "627,190",
     area: "13,496 km²",
   },
-  LaCoruña: {
+  LaCoruna: {
     population: "1,120,134",
     area: "7,950 km²",
   },
@@ -275,11 +280,11 @@ const allProvincesAndRegionsInfoObj = {
     population: "1,128,539",
     area: "4,066 km²",
   },
-  León: {
+  Leon: {
     population: "451,706",
     area: "15,581 km²",
   },
-  Lérida: {
+  Lerida: {
     population: "439,727",
     area: "12,172 km²",
   },
@@ -291,7 +296,7 @@ const allProvincesAndRegionsInfoObj = {
     population: "6,751,251",
     area: "8,028 km²",
   },
-  Málaga: {
+  Malaga: {
     population: "1,695,651",
     area: "7,308 km²",
   },
@@ -554,7 +559,6 @@ const legendHoverEffects = function (
 ) {
   $(regionListItem).hover(
     function () {
-      console.log("Hovering list item");
       $(regionBox).css({
         "background-color": lighterColourChange,
         transition: "0.6s",
@@ -568,7 +572,6 @@ const legendHoverEffects = function (
       $(islandRect).css("stroke", "red"); // only works for islands as default parameter is none
     },
     function () {
-      console.log("Hovering elsewhere");
       $(regionBox).css({ "background-color": "", transition: "0.6s" });
       $(regionLegendText).css("font-weight", "");
       regionNodeList.forEach((element) => {
@@ -729,3 +732,49 @@ for (let i = 0; i < islandsAndEnclaves.length; i++) {
     regionsObj[boxRegion].provinceNodeList
   );
 }
+
+///////////////////////////////////////// remove spaces and accents on the region/province names
+
+const removeSpacesAndAccents = function (str) {
+  str = str.replace(/\s+/g, ""); // remove spaces
+  str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // remove accents
+  return str;
+};
+
+////////////////////////////////// generate population and areakm2 info for regions
+
+$(".mapLegendList li").click(function () {
+  let clickedRegion = this.lastElementChild.innerText;
+
+  clickedRegion = removeSpacesAndAccents(clickedRegion);
+
+  console.log(clickedRegion);
+
+  $(".population").text(
+    allProvincesAndRegionsInfoObj[clickedRegion].population
+  );
+
+  $(".areakm2").text(allProvincesAndRegionsInfoObj[clickedRegion].area);
+});
+
+$();
+
+/////////////////////////////// generate population and areakm2 info for provinces
+
+for (let i = 0; i < allRegionsMap.length; i++) {
+  $(`.${allRegionsMap[i]}Region`).click(function () {
+    let clickedProvince = this.id;
+
+    clickedProvince = removeSpacesAndAccents(clickedProvince);
+
+    console.log(clickedProvince);
+
+    $(".population").text(
+      allProvincesAndRegionsInfoObj[clickedProvince].population
+    );
+
+    $(".areakm2").text(allProvincesAndRegionsInfoObj[clickedProvince].area);
+  });
+}
+
+console.log(allRegionsMap[15]);

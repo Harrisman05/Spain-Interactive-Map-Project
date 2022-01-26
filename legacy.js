@@ -169,3 +169,68 @@
 //     top: yOffset,
 //   });
 // });
+
+// console.log($(".mapLegendList"));
+// console.log(
+//   $(".mapLegendList").forEach((element) => {
+//     console.log(element);
+//   })
+// );
+
+// console.log(mapLegendList);
+
+// console.log(
+//   Array.from(mapLegendList).forEach((element) => {
+//     console.log(element);
+//     console.log(element.lastElementChild.innerText);
+//   })
+// );
+
+// // list item population generation
+
+// $(".population").click(function () {
+//   console.log("pop clicked");
+//   $(".population").text("pop");
+// });
+
+// // region list item, allProvincesAndRegionsInfoObj. region . population
+
+// $(".GaliciaListItem").click(() => {
+//   console.log("galicica list item clicked");
+//   console.log(allProvincesAndRegionsInfoObj.Galicia.population);
+//   $(".population").text(allProvincesAndRegionsInfoObj.Galicia.population);
+// });
+
+// GaliciaRegionNodeList.forEach((element) => {
+//   console.log(element.id);
+
+//   let clickedProvince = element.id;
+
+//   clickedProvince = removeSpacesAndAccents(clickedProvince);
+
+//   console.log(clickedProvince);
+
+// $(".population").text(
+//   allProvincesAndRegionsInfoObj[clickedProvince].population
+// );
+
+// $(".areakm2").text(allProvincesAndRegionsInfoObj[clickedProvince].area);
+// });
+
+// console.log(
+//   Array.from($(".GaliciaRegion")).forEach((element) => {
+//     console.log(element.id);
+
+//     let clickedProvince = element.id;
+
+//     clickedProvince = removeSpacesAndAccents(clickedProvince);
+
+//     console.log(clickedProvince);
+
+//     $(".population").text(
+//       allProvincesAndRegionsInfoObj[clickedProvince].population
+//     );
+
+//     $(".areakm2").text(allProvincesAndRegionsInfoObj[clickedProvince].area);
+//   })
+// );

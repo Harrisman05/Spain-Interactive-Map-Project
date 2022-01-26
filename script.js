@@ -21,7 +21,9 @@ const ExtremaduraRegionNodeList =
 const CastileLaManchaRegionNodeList = document.querySelectorAll(
   ".CastileLaManchaRegion"
 );
-const ValenciaRegionNodeList = document.querySelectorAll(".ValenciaRegion");
+const ValencianCommunityRegionNodeList = document.querySelectorAll(
+  ".ValencianCommunityRegion"
+);
 const MurciaRegionNodeList = document.querySelectorAll(".MurciaRegion");
 const AndalusiaRegionNodeList = document.querySelectorAll(".AndalusiaRegion");
 const BalearicIslandsNodeList = document.querySelectorAll(".BalearicIslands");
@@ -36,7 +38,7 @@ const EnclavesNodeList = document.querySelectorAll(".Enclaves");
 $(".tooltip").hide();
 $(".modalOverlay").hide();
 
-const allRegions = [
+const allRegionsMap = [
   "Galicia",
   "Asturias",
   "Cantabria",
@@ -49,7 +51,7 @@ const allRegions = [
   "Madrid",
   "Extremadura",
   "CastileLaMancha",
-  "Valencia",
+  "ValencianCommunity",
   "Murcia",
   "Andalusia",
   "BalearicIslands",
@@ -58,25 +60,34 @@ const allRegions = [
   "Enclaves",
 ];
 
-const allProvinces = [
+const allProvincesAndRegionsInfoArr = [
   "Álava",
   "Albacete",
   "Alicante",
   "Almería",
+  "Andalusia",
+  "Aragon",
   "Asturias",
   "Ávila",
   "Badajoz",
   "BalearicIslands",
   "Barcelona",
+  "BasqueCountry",
   "Bizkaia",
   "Burgos",
   "Cáceres",
   "Cádiz",
   "Cantabria",
   "Castellón",
+  "CastileLaMancha",
+  "CastileYLeon",
+  "Catalonia",
+  "Ceuta",
   "CiudadReal",
   "Córdoba",
   "Cuenca",
+  "Extremadura",
+  "Galicia",
   "Gipuzkoa",
   "Gerona",
   "Granada",
@@ -86,19 +97,20 @@ const allProvinces = [
   "Jaén",
   "LaCoruña",
   "LaRioja",
-  "LasPalmas",
+  "ProvincesOfLasPalmas",
+  "ProvincesOfSantaCruzdeTenerife",
   "León",
   "Lérida",
   "Lugo",
   "Madrid",
   "Málaga",
+  "Melilla",
   "Murcia",
   "Navarre",
   "Orense",
   "Palencia",
   "Pontevedra",
   "Salamanca",
-  "SantaCruzdeTenerife",
   "Segovia",
   "Seville",
   "Soria",
@@ -106,167 +118,262 @@ const allProvinces = [
   "Teruel",
   "Toledo",
   "Valencia",
+  "ValencianCommunity",
   "Valladolid",
   "Zamora",
   "Zaragoza",
 ];
 
-// console.log(allProvinces.length);
+console.log(allProvincesAndRegionsInfoArr.length);
 
-const ProvincesObj = {
+const allProvincesAndRegionsInfoObj = {
   Álava: {
-    population: 333626,
+    population: "333,626",
+    area: "3,038 km²",
   },
   Albacete: {
-    population: 386464,
+    population: "386,464",
+    area: "14,926 km²",
   },
   Alicante: {
-    population: 1881762,
+    population: "1,881,762",
+    area: "5,817 km²",
   },
   Almería: {
-    population: 731792,
+    population: "731,792",
+    area: "8,775 km²",
+  },
+  Andalusia: {
+    population: "8,472,407",
+    area: "87,598 km²",
+  },
+  Aragon: {
+    population: "1,326,261",
+    area: "47,720 km²",
   },
   Asturias: {
-    population: 1011792,
+    population: "1,011,792",
+    area: "10,604 km²",
   },
   Ávila: {
-    population: 158421,
+    population: "158,421",
+    area: "8,050 km²",
   },
   Badajoz: {
-    population: 669943,
+    population: "669,943",
+    area: "21,766 km²",
   },
   BalearicIslands: {
-    population: 1173008,
+    population: "1,173,008",
+    area: "4,992 km²",
   },
   Barcelona: {
-    population: 5714730,
+    population: "5,714,730",
+    area: "7,728 km²",
+  },
+  BasqueCountry: {
+    population: "2,213,993",
+    area: "7,235 km²",
   },
   Bizkaia: {
-    population: 1154334,
+    population: "1,154,334",
+    area: "2,217 km²",
   },
   Burgos: {
-    population: 356055,
+    population: "356,055",
+    area: "14,291 km²",
   },
   Cáceres: {
-    population: 389558,
+    population: "389,558",
+    area: "19,868 km²",
   },
   Cádiz: {
-    population: 1245960,
+    population: "1,245,960",
+    area: "7,436 km²",
   },
   Cantabria: {
-    population: 584507,
+    population: "584,507",
+    area: "5,321 km²",
   },
   Castellón: {
-    population: 587064,
+    population: "587,064",
+    area: "6,632 km²",
+  },
+  CastileLaMancha: {
+    population: "2,049,562",
+    area: "79,462 km²",
+  },
+  CastileYLeon: {
+    population: "2,383,139",
+    area: "94,225 km²",
+  },
+  Catalonia: {
+    population: "7,763,362",
+    area: "32,113 km²",
+  },
+  Ceuta: {
+    population: "83,517",
+    area: "19.48 km²",
   },
   CiudadReal: {
-    population: 492591,
+    population: "492,591",
+    area: "19,813 km²",
   },
   Córdoba: {
-    population: 776789,
+    population: "776,789",
+    area: "13,771 km²",
   },
   Cuenca: {
-    population: 195516,
+    population: "195,516",
+    area: "17,141 km²",
+  },
+  Galicia: {
+    population: "2,695,645",
+    area: "29,574 km²",
   },
   Gipuzkoa: {
-    population: 726033,
+    population: "726,033",
+    area: "1,980 km²",
   },
   Gerona: {
-    population: 786596,
+    population: "786,596",
+    area: "5,910 km²",
   },
   Granada: {
-    population: 921338,
+    population: "921,338",
+    area: "12,647 km²",
   },
   Guadalajara: {
-    population: 265588,
+    population: "265,588",
+    area: "12,212 km²",
   },
   Huelva: {
-    population: 525835,
+    population: "525835",
+    area: "10,128 km²",
   },
   Huesca: {
-    population: 224264,
+    population: "224,264",
+    area: "15,636 km²",
+  },
+  Extremadura: {
+    population: "1,059,501",
+    area: "41,635 km²",
   },
   Jaén: {
-    population: 627190,
+    population: "627,190",
+    area: "13,496 km²",
   },
   LaCoruña: {
-    population: 1120134,
+    population: "1,120,134",
+    area: "7,950 km²",
   },
   LaRioja: {
-    population: 319796,
+    population: "319,796",
+    area: "5,045 km²",
   },
-  LasPalmas: {
-    population: 1128539,
+  ProvincesOfLasPalmas: {
+    population: "1,128,539",
+    area: "4,066 km²",
   },
   León: {
-    population: 451706,
+    population: "451,706",
+    area: "15,581 km²",
   },
   Lérida: {
-    population: 439727,
+    population: "439,727",
+    area: "12,172 km²",
   },
   Lugo: {
-    population: 326013,
+    population: "326,013",
+    area: "9,856 km²",
   },
   Madrid: {
-    population: 6751251,
+    population: "6,751,251",
+    area: "8,028 km²",
   },
   Málaga: {
-    population: 1695651,
+    population: "1,695,651",
+    area: "7,308 km²",
+  },
+  Melilla: {
+    population: "86,261",
+    area: "13.41 km²",
   },
   Murcia: {
-    population: 1518486,
+    population: "1,518,486",
+    area: "11,313 km²",
   },
-  Navarre: {
-    population: 661537,
+  Navarra: {
+    population: "661,537",
+    area: "10,390 km² ",
   },
   Orense: {
-    population: 305223,
+    population: "305,223",
+    area: "7,273 km²",
   },
   Palencia: {
-    population: 159123,
+    population: "159,123",
+    area: "8,053 km²",
   },
   Pontevedra: {
-    population: 944275,
+    population: "944,275",
+    area: "4,495 km²",
   },
   Salamanca: {
-    population: 327338,
+    population: "327,338",
+    area: "12,350 km²",
   },
-  SantaCruzdeTenerife: {
-    population: 1044405,
+  ProvincesOfSantaCruzDeTenerife: {
+    population: "1,044,405",
+    area: "3,381 km²",
   },
   Segovia: {
-    population: 153663,
+    population: "153,663",
+    area: "6,923 km²",
   },
   Seville: {
-    population: 1947852,
+    population: "1,947,852",
+    area: "14,036 km²",
   },
   Soria: {
-    population: 88747,
+    population: "88,747",
+    area: "10,306 km²",
   },
   Tarragona: {
-    population: 822309,
+    population: "822,309",
+    area: "6,303 km²",
   },
   Teruel: {
-    population: 134545,
+    population: "134,545",
+    area: "14,810 km²",
   },
   Toledo: {
-    population: 709403,
+    population: "709,403",
+    area: "15,370 km²",
   },
   Valencia: {
-    population: 2589312,
+    population: "2,589,312",
+    area: "10,806 km²",
+  },
+  ValencianCommunity: {
+    population: "5,058,138",
+    area: "23,255 km²",
   },
   Valladolid: {
-    population: 519361,
+    population: "519,361",
+    area: "8,110 km²",
   },
   Zamora: {
-    population: 168725,
+    population: "168,725",
+    area: "10,561 km²",
   },
   Zaragoza: {
-    population: 967452,
+    population: "967,452",
+    area: "17,275 km²",
   },
 };
 
-// console.log(Object.keys(ProvincesObj).length);
+console.log(Object.keys(allProvincesAndRegionsInfoObj).length);
 
 const islandsAndEnclaves = [
   "BalearicIslands",
@@ -283,7 +390,6 @@ const regionsObj = {
     provinceNodeList: GaliciaRegionNodeList,
     lighterColourChange: "#26a626",
     strokeColour: "white",
-    population: 2695645,
   },
   Asturias: {
     listClass: ".AsturiasListItem",
@@ -292,7 +398,6 @@ const regionsObj = {
     provinceNodeList: AsturiasRegionNodeList,
     lighterColourChange: "#ffa633",
     strokeColour: "black",
-    population: 1011792,
   },
   Cantabria: {
     listClass: ".CantabriaListItem",
@@ -301,7 +406,6 @@ const regionsObj = {
     provinceNodeList: CantabriaRegionNodeList,
     lighterColourChange: "#ff66ff",
     strokeColour: "white",
-    population: 584507,
   },
   BasqueCountry: {
     listClass: ".BasqueCountryListItem",
@@ -310,7 +414,6 @@ const regionsObj = {
     provinceNodeList: BasqueCountryRegionNodeList,
     lighterColourChange: "#44c7bc",
     strokeColour: "white",
-    population: 2213993,
   },
   Navarra: {
     listClass: ".NavarraListItem",
@@ -319,7 +422,6 @@ const regionsObj = {
     provinceNodeList: NavarraRegionNodeList,
     lighterColourChange: "#ffeac3",
     strokeColour: "black",
-    population: 661537,
   },
   Aragon: {
     listClass: ".AragonListItem",
@@ -328,7 +430,6 @@ const regionsObj = {
     provinceNodeList: AragonRegionNodeList,
     lighterColourChange: "#c05cff",
     strokeColour: "white",
-    population: 1326261,
   },
   Catalonia: {
     listClass: ".CataloniaListItem",
@@ -337,7 +438,6 @@ const regionsObj = {
     provinceNodeList: CataloniaRegionNodeList,
     lighterColourChange: "#f4626e",
     strokeColour: "white",
-    population: 7763362,
   },
   LaRioja: {
     listClass: ".LaRiojaListItem",
@@ -346,7 +446,6 @@ const regionsObj = {
     provinceNodeList: LaRiojaRegionNodeList,
     lighterColourChange: "#cdc6bf",
     strokeColour: "#cdc6bf",
-    population: 319796,
   },
   CastileYLeon: {
     listClass: ".CastileYLeonListItem",
@@ -355,7 +454,6 @@ const regionsObj = {
     provinceNodeList: CastileYLeonRegionNodeList,
     lighterColourChange: "#635bd2",
     strokeColour: "white",
-    population: 2383139,
   },
   Madrid: {
     listClass: ".MadridListItem",
@@ -364,7 +462,6 @@ const regionsObj = {
     provinceNodeList: MadridRegionNodeList,
     lighterColourChange: "#ffff33",
     strokeColour: "black",
-    population: 6751251,
   },
   Extremadura: {
     listClass: ".ExtremaduraListItem",
@@ -373,7 +470,6 @@ const regionsObj = {
     provinceNodeList: ExtremaduraRegionNodeList,
     lighterColourChange: "#3fd9ff",
     strokeColour: "black",
-    population: 1059501,
   },
   CastileLaMancha: {
     listClass: ".CastileLaManchaListItem",
@@ -382,16 +478,14 @@ const regionsObj = {
     provinceNodeList: CastileLaManchaRegionNodeList,
     lighterColourChange: "#ffc1d3",
     strokeColour: "black",
-    population: 2049562,
   },
-  Valencia: {
-    listClass: ".ValenciaListItem",
-    boxId: "#ValenciaBox",
-    textClass: ".ValenciaLegendText",
-    provinceNodeList: ValenciaRegionNodeList,
+  ValencianCommunity: {
+    listClass: ".ValencianCommunityListItem",
+    boxId: "#ValencianCommunityBox",
+    textClass: ".ValencianCommunityLegendText",
+    provinceNodeList: ValencianCommunityRegionNodeList,
     lighterColourChange: "#547254",
     strokeColour: "white",
-    population: 5058138,
   },
   Murcia: {
     listClass: ".MurciaListItem",
@@ -400,7 +494,6 @@ const regionsObj = {
     provinceNodeList: MurciaRegionNodeList,
     lighterColourChange: "#bd864f",
     strokeColour: "black",
-    population: 1518486,
   },
   Andalusia: {
     listClass: ".AndalusiaListItem",
@@ -409,7 +502,6 @@ const regionsObj = {
     provinceNodeList: AndalusiaRegionNodeList,
     lighterColourChange: "#cc4444",
     strokeColour: "white",
-    population: 8472407,
   },
   BalearicIslands: {
     listClass: ".BalearicIslandsListItem",
@@ -419,7 +511,6 @@ const regionsObj = {
     lighterColourChange: "#80b350",
     strokeColour: "#3d2b1f",
     islandRect: ".BalearicRect",
-    population: 1173008,
   },
   ProvincesOfLasPalmas: {
     listClass: ".ProvincesOfLasPalmasListItem",
@@ -429,7 +520,6 @@ const regionsObj = {
     lighterColourChange: "#ffc74d",
     strokeColour: "#000000",
     islandRect: ".GranCanariaRect",
-    population: 1128539,
   },
   ProvincesOfSantaCruzDeTenerife: {
     listClass: ".ProvincesOfSantaCruzDeTenerifeListItem",
@@ -439,7 +529,6 @@ const regionsObj = {
     lighterColourChange: "#FF67C0",
     strokeColour: "#000000",
     islandRect: ".GranCanariaRect",
-    population: 1044405,
   },
   Enclaves: {
     listClass: ".EnclavesListItem",
@@ -449,7 +538,6 @@ const regionsObj = {
     lighterColourChange: "#67dfff",
     strokeColour: "#000000",
     islandRect: ".CeutaMelillaRect",
-    population: 0,
   },
 };
 
@@ -495,8 +583,8 @@ const legendHoverEffects = function (
 
 //////////////////////////////////////////////// Legend Effects Function Calls in for loop ////////////////////////////////////////
 
-for (let i = 0; i < allRegions.length; i++) {
-  let region = allRegions[i];
+for (let i = 0; i < allRegionsMap.length; i++) {
+  let region = allRegionsMap[i];
 
   legendHoverEffects(
     regionsObj[region].listClass,
@@ -536,8 +624,8 @@ const mapHoverEffects = function (
 
 ////////////////////////////////// Map Hover effects function calls in for loop
 
-for (let i = 0; i < allRegions.length; i++) {
-  let region = allRegions[i];
+for (let i = 0; i < allRegionsMap.length; i++) {
+  let region = allRegionsMap[i];
 
   mapHoverEffects(
     regionsObj[region].provinceNodeList,
@@ -574,8 +662,8 @@ const mapToolTipHover = function (regionNodeList) {
 
 ///////////////////////////////// Tooltip function calls on all regions
 
-for (let i = 0; i < allRegions.length; i++) {
-  let region = allRegions[i];
+for (let i = 0; i < allRegionsMap.length; i++) {
+  let region = allRegionsMap[i];
 
   mapToolTipHover(regionsObj[region].provinceNodeList);
 }
@@ -635,8 +723,6 @@ const boxHighlightHover = function (box, nodelist) {
 
 for (let i = 0; i < islandsAndEnclaves.length; i++) {
   let boxRegion = islandsAndEnclaves[i];
-  console.log(regionsObj[boxRegion].islandRect);
-  console.log(regionsObj[boxRegion].provinceNodeList);
 
   boxHighlightHover(
     regionsObj[boxRegion].islandRect,

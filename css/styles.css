@@ -341,21 +341,21 @@ svg path:hover {
   background-color: #ffc1d3;
 }
 
-.ValenciaRegion {
+.ValencianCommunityRegion {
   fill: rgb(33, 63, 33);
   stroke: rgb(33, 63, 33);
 }
 
-.ValenciaRegion:hover {
+.ValencianCommunityRegion:hover {
   fill: #547254;
   stroke: #547254;
 }
 
-#ValenciaBox {
+#ValencianCommunityBox {
   background-color: rgb(33, 63, 33);
 }
 
-.ValenciaListItem:hover {
+.ValencianCommunityListItem:hover {
   background-color: #547254;
 }
 

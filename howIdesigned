@@ -4,6 +4,13 @@ RGB to Hex converter used online - https://rgb.to/33,63,33
 
 Hex color lighener/darkener used to create the light shades - https://www.cssfontstack.com/oldsites/hexcolortool/
 
+learning jQuery
+learning about colour matching/contrasting
+making code efficient
+learning css flexbox 
+
+
+
 functions
 
 hover map legend - utilises jquery hover function so that a hoveron, hoveroff state can really easily be achieved. Hovering on map interactively lights up the map for quick recognition. Transitions used for smooth effects
@@ -17,3 +24,11 @@ Refactored code so that regions were put into objects so I could call a loop on 
 tooltip - uses node list and this keyword to generate the name in the tooltip. This refers to the specific province that is being hovered, so $(".tooltip").text(this.id) updates the text inside the tool tip with the id of the province. mousemove function is used to track the x and y coord of the mouse, then an offset is applied and used to dynamically position the tooltip relative to mouse position. These offsets coupled with the x and y coordinates then dynamically changes the top and left properties of the position: fixed tooltip, hence it can change position
 
 Close Modal -  used jQuery click function to open modal, then used another jQuery click function to close modal if the map container was clicked. Closing the modal if clicking on the overlay was more tricky, because the modal window is inside the modal overlay div. So, I used window.onclick function to generate and event (e), then targetted the specific class of "modalFlexContainer" and "closeModalButton" to be clicked to ensure that the box can be close this way. Also added escape key as option to close modal.
+
+
+google search
+weather
+hotels
+restaurants
+shopping
+landmarks

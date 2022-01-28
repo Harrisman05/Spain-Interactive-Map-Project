@@ -46,8 +46,11 @@ text {
   z-index: 10;
   background-color: white;
   border: 0.2vw rgb(255, 0, 0) dotted;
-  padding: 1vw 0.5vw 1vw 0.5vw;
+  padding: 0.2vw 0.5vw 1vw 0.5vw;
   max-width: 22%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .BalearesIslandsLegendContainer {
@@ -65,8 +68,6 @@ text {
   font-size: clamp(6px, 1.6vw, 22px);
   white-space: nowrap;
   padding: 0.2vh 0 0.2vh 0.2vh;
-  margin-bottom: 1vh;
-  text-align: center;
   font-weight: bold;
 }
 
@@ -482,23 +483,42 @@ svg path:hover {
   top: 10%;
 }
 
-.Enclaves {
+.MelillaRegion {
   fill: #0a7eac;
   stroke: #000000;
   stroke-width: 2;
 }
 
-.Enclaves:hover {
+.MelillaRegion:hover {
   fill: #67dfff;
   stroke: #000000;
 }
 
-#EnclavesBox {
+#MelillaBox {
   background-color: #0a7eac;
 }
 
-.EnclavesListItem:hover {
+.MelillaListItem:hover {
   background-color: #67dfff;
+}
+
+.CeutaRegion {
+  fill: #e6852b;
+  stroke: #000000;
+  stroke-width: 2;
+}
+
+.CeutaRegion:hover {
+  fill: #ffb85e;
+  stroke: #000000;
+}
+
+#CeutaBox {
+  background-color: #e6852b;
+}
+
+.CeutaListItem:hover {
+  background-color: #ffb85e;
 }
 
 .textContainer {
@@ -650,11 +670,28 @@ svg path:hover {
 
 .infoboxes {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   border: 5px green solid;
   background-color: rgb(238, 255, 221);
   height: 100%;
+}
+
+.flagContainer {
   width: 100%;
+  background-color: #eeb58f;
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  width: 15vw;
+  max-width: 175px;
+  height: 10vw;
+  max-height: 100%;
+  align-self: center;
 }
 
 .population {
@@ -667,4 +704,47 @@ svg path:hover {
   border: 5px rgb(25, 0, 255) solid;
   background-color: #ffcca9;
   height: 10%;
+}
+
+.infoboxTitle {
+  color: red;
+  border: 5px blue solid;
+  flex-grow: 1;
+  text-align: center;
+  width: 100%;
+  height: 10%;
+}
+
+.touristInfoContainer {
+  background-color: #80b350;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+i {
+}
+
+.fa-google {
+  flex-basis: 33%;
+  align-self: center;
+  text-align: center;
+}
+.fa-sun {
+  flex-basis: 33%;
+  text-align: center;
+}
+.fa-bed {
+  flex-basis: 33%;
+  text-align: center;
+}
+
+.fa-utensils {
+}
+.fa-shopping-cart {
+}
+.fa-landmark {
 }

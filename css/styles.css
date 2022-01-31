@@ -28,8 +28,8 @@ text {
 
 .pageContainer {
   display: flex;
-  border: red solid 5px;
-  height: 95vh;
+  border: black solid 5px;
+  height: 100vh;
 }
 
 .mapContainer {
@@ -65,7 +65,8 @@ text {
 }
 
 .mapLegendHeader {
-  font-size: clamp(6px, 1.6vw, 22px);
+  font-size: 1.6vw;
+  /* font-size: clamp(6px, 1.6vw, 22px); */
   white-space: nowrap;
   padding: 0.2vh 0 0.2vh 0.2vh;
   font-weight: bold;
@@ -98,7 +99,7 @@ text {
 }
 
 svg {
-  border: solid rgb(5, 175, 197) 5px;
+  /* border: solid rgb(5, 175, 197) 5px; */
   background: rgb(180, 183, 255);
   max-height: 100%;
   width: 100%;
@@ -522,7 +523,7 @@ svg path:hover {
 }
 
 .textContainer {
-  border: solid purple 5px;
+  /* border: solid purple 5px; */
   background-color: rgb(235, 210, 196);
   width: 50vw;
   height: 100%;
@@ -530,29 +531,56 @@ svg path:hover {
   flex-direction: column;
 }
 
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5vw;
+}
+
 .introductionHeader {
   display: flex;
   justify-content: space-around;
-  font-size: clamp(30px, 2vw, 400px);
+  width: 100%;
+}
+
+.introductionTitle {
+  font-size: 2.5vw;
   margin-top: 0.5vw;
 }
 
+.spainFlag {
+  width: 6vw;
+  height: 4vw;
+  margin-top: 0.4vw;
+}
+
 .introductionText {
-  margin: 1vw 2vw 1vw 2vw;
-  background-color: white;
-  border: 1px solid black;
-  padding: 10px;
+  font-size: 1.2vw;
+  background-color: rgb(230, 130, 91);
+  padding: 1vw;
+  border-radius: 1vw;
 }
 
 .howToUseButton {
-  align-self: center;
+  background-color: #24a0ed;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  margin-bottom: 1vw;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+.howToUseButton:hover {
+  background-color: #57d3ff;
 }
 
 .modalOverlay {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(0.5vw);
-  height: 95%;
+  height: 100%;
   width: 50%;
   top: 0;
   right: 0;
@@ -650,82 +678,75 @@ svg path:hover {
   margin-right: 1.1vw;
 }
 
-@media (max-width: 1566px) {
-  .spainFlagOuter {
-    display: none;
-  }
-}
-
-@media (max-width: 1192px) {
-  .spainFlagMiddle {
-    display: none;
-  }
-}
-
-@media (max-width: 826px) {
-  .spainFlagInner {
-    display: none;
-  }
-}
-
 .infoboxes {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 5px green solid;
-  background-color: rgb(238, 255, 221);
+  /* border: 5px green solid; */
   height: 100%;
+  background-color: #ffd679;
 }
 
 .flagContainer {
   width: 100%;
-  background-color: #eeb58f;
+  background-color: #e6f4f1;
   height: 25%;
   display: flex;
   justify-content: space-around;
 }
 
-img {
+.flagSVG {
   width: 15vw;
   max-width: 175px;
   height: 10vw;
-  max-height: 100%;
+  max-height: 90%;
   align-self: center;
 }
 
 .population {
-  border: 5px red solid;
-  background-color: #ffcca9;
-  height: 10%;
+  /* border: 5px red solid; */
+  background-color: #f88585;
+  color: black;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 3vw;
+  padding: 1vw;
+  font-size: 2vw;
 }
 
 .areakm2 {
-  border: 5px rgb(25, 0, 255) solid;
-  background-color: #ffcca9;
-  height: 10%;
+  /* border: 5px rgb(25, 0, 255) solid; */
+  background-color: #f88585;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 3vw;
+  padding: 2vw;
+  font-size: 2vw;
 }
 
 .infoboxTitle {
-  color: red;
-  border: 5px blue solid;
-  flex-grow: 1;
+  color: rgb(0, 0, 0);
+  font-size: 2.5vw;
   text-align: center;
-  width: 100%;
-  height: 10%;
+  align-self: center;
 }
 
 .touristInfoContainer {
   background-color: #80b350;
   width: 100%;
-  height: 30%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
 }
 
-i {
+.searchIcons {
+  font-size: 5vw;
 }
 
 .fa-google {
@@ -733,18 +754,63 @@ i {
   align-self: center;
   text-align: center;
 }
+.fa-google:hover {
+  color: #4285f4;
+  transition: 0.4s;
+  cursor: pointer;
+}
 .fa-sun {
   flex-basis: 33%;
   text-align: center;
+}
+.fa-sun:hover {
+  color: yellow;
+  transition: 0.4s;
+  cursor: pointer;
 }
 .fa-bed {
   flex-basis: 33%;
   text-align: center;
 }
+.fa-bed:hover {
+  color: rgb(207, 34, 34);
+  transition: 0.4s;
+  cursor: pointer;
+}
 
 .fa-utensils {
+  flex-basis: 33%;
+  text-align: center;
+}
+
+.fa-utensils:hover {
+  color: #d4d4d4;
+  transition: 0.4s;
+  cursor: pointer;
 }
 .fa-shopping-cart {
+  flex-basis: 33%;
+  text-align: center;
+}
+.fa-shopping-cart:hover {
+  color: #e75f29;
+  transition: 0.4s;
+  cursor: pointer;
 }
 .fa-landmark {
+  flex-basis: 33%;
+  text-align: center;
+}
+.fa-landmark:hover {
+  color: #f0de9a;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.dataReferences {
+  position: absolute;
+  font-size: 0.6vw;
+  top: 1vw;
+  left: 45vw;
+  z-index: 100;
 }

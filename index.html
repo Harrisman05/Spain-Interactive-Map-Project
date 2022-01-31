@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Courgette&family=Lato&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://kit.fontawesome.com/1523ecc930.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -41,7 +42,7 @@
             </div>
             <div class="modalSubContainer legendHowToUse">
               <ul>
-                <li><h3 class="howToUseH3">Interactive Legend Guide</h3></li>
+                <li><h3 class="howToUseH3">Interactive Legend</h3></li>
                 <li>Hover over a region in the legend</li>
                 <li>The selected region will also be highlighted on the map</li>
                 <li>Click to generate information about the region!</li>
@@ -54,7 +55,7 @@
             </div>
             <div class="modalSubContainer mapHowToUse">
               <ul>
-                <li><h3 class="howToUseH3">Interactive Map Guide</h3></li>
+                <li><h3 class="howToUseH3">Interactive Map</h3></li>
                 <li>Hover over a province on the map</li>
                 <li>The selected province will highlight on the map</li>
                 <li>Click to generate information about the province!</li>
@@ -603,39 +604,38 @@
       <div class="textContainer">
         <div class="introduction">
           <div class="introductionHeader">
-            <!-- <img class="spainFlagOuter" src="/images/spainFlag.png" />
-            <img class="spainFlagMiddle" src="/images/spainFlag.png" />
-            <img class="spainFlagInner" src="/images/spainFlag.png" /> -->
-            <h1 class="introductionHeader">Discover Spain!</h1>
-            <!-- <img class="spainFlagOuter" src="/images/spainFlag.png" />
-            <img class="spainFlagMiddle" src="/images/spainFlag.png" />
-            <img class="spainFlagInner" src="/images/spainFlag.png" /> -->
+            <img class="spainFlag" src="/images/spainFlag.svg" />
+            <h1 class="introductionTitle">Discover Spain!</h1>
+            <img class="spainFlag" src="/images/spainFlag.svg" />
           </div>
           <p class="introductionText">
-            Welcome to Discover Spain! Navigate the interactive map using the
-            your mouse to discover more about the provinces of Spain! Click on
-            the regions in the map legend to discover more about the regions of
-            Spain.
+            Click on the legend and map to discover more about the regions and provinces of Spain!
           </p>
+
+          <button class="howToUseButton">How to use map</button>
         </div>
-        <button class="howToUseButton">How to use map</button>
+
         <div class="infoboxes">
-          <h2 class="infoboxTitle"> Region/Province Title</h2>
+
           <div class="flagContainer">
-            <img class="flagSVG" src="/images/ProvinceFlags/LasPalmas.svg" alt="">
+            <h2 class="infoboxTitle"> Region/Province Title</h2>
+            <img class="flagSVG" src="/images/ProvinceFlags/no_flag.svg" alt="">
           </div>
           <div class="population">Population</div>
-          <div class="areakm2">Area (km2)</div>
+          <div class="areakm2">Area (km²)</div>
           <div class=touristInfoContainer>
-            <i class="fab fa-google fa-3x"></i>
-            <i class="fas fa-sun fa-3x"></i>
-            <i class="fas fa-bed fa-3x"></i>
-            <i class="fas fa-utensils fa-3x"></i>
-            <i class="fas fa-shopping-cart fa-3x"></i>
-            <i class="fas fa-landmark fa-3x"></i>
+            <i class="searchIcons fab fa-google fa-3x" title="Google Search"></i>
+            <i class="searchIcons fas fa-sun fa-3x" title="Weather"></i>
+            <i class="searchIcons fas fa-bed fa-3x" title="Hotels"></i>
+            <i class="searchIcons fas fa-utensils fa-3x" title="Restaurants"></i>
+            <i class="searchIcons fas fa-shopping-cart fa-3x" title="Shopping"></i>
+            <i class="searchIcons fas fa-landmark fa-3x" title="Landmarks"></i>
           </div>
         </div>
 
+      </div>
+      <div class="dataReferences">
+        <a href="/references.html">Data references</a>
       </div>
     </div>
 

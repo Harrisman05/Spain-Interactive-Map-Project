@@ -903,10 +903,14 @@ $(".mapLegendList li").click(function () {
     `Area ${allProvincesAndRegionsInfoObj[clickedRegion].area}`
   );
 
+  $(".infoboxTitle").text(`${this.lastElementChild.innerText} (Region)`);
+
   $(".flagSVG").attr(
     "src",
     `${allProvincesAndRegionsInfoObj[clickedRegion].regionFlag}`
   );
+
+  googleSearches(clickedRegion);
 });
 
 /////////////////////////////// generate population and areakm2 info for provinces
@@ -921,12 +925,14 @@ for (let i = 0; i < allRegionsMap.length; i++) {
     console.log(clickedProvince);
 
     $(".population").text(
-      `Population ${allProvincesAndRegionsInfoObj[clickedProvince].population}`
+      `Population: ${allProvincesAndRegionsInfoObj[clickedProvince].population}`
     );
 
     $(".areakm2").text(
-      `Area ${allProvincesAndRegionsInfoObj[clickedProvince].area}`
+      `Area: ${allProvincesAndRegionsInfoObj[clickedProvince].area}`
     );
+
+    $(".infoboxTitle").text(`${this.id} (Province)`);
 
     console.log(allProvincesAndRegionsInfoObj[clickedProvince]);
 
@@ -934,5 +940,30 @@ for (let i = 0; i < allRegionsMap.length; i++) {
       "src",
       `${allProvincesAndRegionsInfoObj[clickedProvince].provinceFlag}`
     );
+
+    googleSearches(clickedProvince);
   });
 }
+
+//////////////////////////////////////// create google search function
+
+const googleSearches = function (query) {
+  document.querySelector(".fa-google").onclick = function () {
+    window.open(`http://google.com/search?q=${query}`);
+  };
+  document.querySelector(".fa-sun").onclick = function () {
+    window.open(`http://google.com/search?q=${query} weather`);
+  };
+  document.querySelector(".fa-bed").onclick = function () {
+    window.open(`http://google.com/search?q=${query} hotels`);
+  };
+  document.querySelector(".fa-utensils").onclick = function () {
+    window.open(`http://google.com/search?q=${query} restaurants`);
+  };
+  document.querySelector(".fa-shopping-cart").onclick = function () {
+    window.open(`http://google.com/search?q=${query} shopping centres`);
+  };
+  document.querySelector(".fa-landmark").onclick = function () {
+    window.open(`http://google.com/search?q=${query} landmarks`);
+  };
+};

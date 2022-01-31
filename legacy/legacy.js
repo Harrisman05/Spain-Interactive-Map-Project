@@ -234,3 +234,28 @@
 //     $(".areakm2").text(allProvincesAndRegionsInfoObj[clickedProvince].area);
 //   })
 // );
+
+// const googleSearchesHover = function () {
+//   //https://stackoverflow.com/questions/42791168/how-to-make-tooltip-follow-cursor
+//   $(".searchIcons").hover(
+//     function () {
+//       $(this).on("mousemove", (e) => {
+//         $(".tooltip").show();
+//         $(".tooltip").text(query + " " + this.title); //https://stackoverflow.com/questions/30570638/get-id-attribute-from-a-node-in-nodelist
+//         console.log(this.title);
+//         let xOffset = e.pageX;
+//         let yOffset = 30 + e.pageY;
+
+//         $(".tooltip").css({
+//           left: xOffset,
+//           top: yOffset,
+//         });
+//       });
+//     },
+//     function () {
+//       $(".tooltip").hide();
+//     }
+//   );
+// };
+
+// googleSearchesHover();

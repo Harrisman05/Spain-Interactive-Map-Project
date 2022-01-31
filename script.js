@@ -910,6 +910,8 @@ $(".mapLegendList li").click(function () {
     `${allProvincesAndRegionsInfoObj[clickedRegion].regionFlag}`
   );
 
+  clickedRegion = clickedRegion + " spain region";
+
   googleSearches(clickedRegion);
 });
 
@@ -940,6 +942,8 @@ for (let i = 0; i < allRegionsMap.length; i++) {
       "src",
       `${allProvincesAndRegionsInfoObj[clickedProvince].provinceFlag}`
     );
+
+    clickedProvince = clickedProvince + " spain province";
 
     googleSearches(clickedProvince);
   });

@@ -746,41 +746,30 @@ svg path:hover {
 }
 
 .searchIcons {
-  font-size: 5vw;
+  font-size: 300%;
 }
 
-.fa-google {
-  flex-basis: 33%;
-  align-self: center;
+.iconBox {
   text-align: center;
+  flex-basis: 33%;
 }
+
 .fa-google:hover {
   color: #4285f4;
   transition: 0.4s;
   cursor: pointer;
 }
-.fa-sun {
-  flex-basis: 33%;
-  text-align: center;
-}
+
 .fa-sun:hover {
   color: yellow;
   transition: 0.4s;
   cursor: pointer;
 }
-.fa-bed {
-  flex-basis: 33%;
-  text-align: center;
-}
+
 .fa-bed:hover {
   color: rgb(207, 34, 34);
   transition: 0.4s;
   cursor: pointer;
-}
-
-.fa-utensils {
-  flex-basis: 33%;
-  text-align: center;
 }
 
 .fa-utensils:hover {
@@ -788,19 +777,13 @@ svg path:hover {
   transition: 0.4s;
   cursor: pointer;
 }
-.fa-shopping-cart {
-  flex-basis: 33%;
-  text-align: center;
-}
+
 .fa-shopping-cart:hover {
   color: #e75f29;
   transition: 0.4s;
   cursor: pointer;
 }
-.fa-landmark {
-  flex-basis: 33%;
-  text-align: center;
-}
+
 .fa-landmark:hover {
   color: #f0de9a;
   transition: 0.4s;

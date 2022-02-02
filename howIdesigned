@@ -25,10 +25,4 @@ tooltip - uses node list and this keyword to generate the name in the tooltip. T
 
 Close Modal -  used jQuery click function to open modal, then used another jQuery click function to close modal if the map container was clicked. Closing the modal if clicking on the overlay was more tricky, because the modal window is inside the modal overlay div. So, I used window.onclick function to generate and event (e), then targetted the specific class of "modalFlexContainer" and "closeModalButton" to be clicked to ensure that the box can be close this way. Also added escape key as option to close modal.
 
-
-google search
-weather
-hotels
-restaurants
-shopping
-landmarks
+In an event, this refers to the element that received the event.

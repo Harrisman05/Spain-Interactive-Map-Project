@@ -798,7 +798,7 @@ svg path:hover {
 .dataReferences {
   position: absolute;
   font-size: 0.6vw;
-  top: 5vw;
+  top: 5.5vw;
   left: 45vw;
   z-index: 100;
 }

@@ -683,6 +683,20 @@ svg path:hover {
   margin-right: 1.1vw;
 }
 
+.clickOnMap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  background-color: #e6f4f1;
+}
+
+.clickOnMap h1 {
+  font-size: 2vw;
+  margin-top: 10%;
+}
+
 .infoboxes {
   display: flex;
   flex-direction: row;

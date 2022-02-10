@@ -40,6 +40,7 @@ const MelillaNodeList = document.querySelectorAll(".MelillaRegion");
 
 $(".tooltip").hide();
 $(".modalOverlay").hide();
+$(".infoboxes").hide();
 
 const allRegionsMap = [
   "Galicia",
@@ -889,6 +890,9 @@ const removeSpacesAndAccents = function (str) {
 ////////////////////////////////// generate population and areakm2 info for regions
 
 $(".mapLegendList li").click(function () {
+  $(".infoboxes").show();
+  $(".clickOnMap").hide();
+
   let clickedRegion = this.lastElementChild.innerText;
 
   clickedRegion = removeSpacesAndAccents(clickedRegion);
@@ -919,7 +923,9 @@ $(".mapLegendList li").click(function () {
 
 for (let i = 0; i < allRegionsMap.length; i++) {
   $(`.${allRegionsMap[i]}Region`).click(function () {
-    console.log(allRegionsMap[i]);
+    $(".infoboxes").show();
+    $(".clickOnMap").hide();
+
     let clickedProvince = this.id;
 
     clickedProvince = removeSpacesAndAccents(clickedProvince);

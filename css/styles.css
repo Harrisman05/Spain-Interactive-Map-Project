@@ -724,8 +724,7 @@ svg path:hover {
 }
 
 .population {
-  /* border: 5px red solid; */
-  background-color: #f88585;
+  background-color: #ffb8b8;
   color: black;
   height: 15%;
   display: flex;
@@ -737,8 +736,7 @@ svg path:hover {
 }
 
 .areakm2 {
-  /* border: 5px rgb(25, 0, 255) solid; */
-  background-color: #f88585;
+  background-color: #ffb8b8;
   height: 15%;
   display: flex;
   flex-direction: column;
@@ -765,7 +763,8 @@ svg path:hover {
 }
 
 .searchIcons {
-  font-size: 300%;
+  /* font-size: 300%; */
+  font-size: 55px;
 }
 
 .iconBox {
@@ -780,7 +779,7 @@ svg path:hover {
 }
 
 .fa-sun:hover {
-  color: yellow;
+  color: #a98112;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -792,19 +791,19 @@ svg path:hover {
 }
 
 .fa-utensils:hover {
-  color: #d4d4d4;
+  color: #817777;
   transition: 0.4s;
   cursor: pointer;
 }
 
 .fa-shopping-cart:hover {
-  color: #e75f29;
+  color: #586825;
   transition: 0.4s;
   cursor: pointer;
 }
 
 .fa-landmark:hover {
-  color: #f0de9a;
+  color: #e75f29;
   transition: 0.4s;
   cursor: pointer;
 }

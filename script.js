@@ -135,382 +135,466 @@ const allProvincesAndRegionsInfoObj = {
   Alava: {
     population: "333,626",
     area: "3,038 km²",
-    provinceFlag: "/images/ProvinceFlags/Álava.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Álava.svg",
   },
   Albacete: {
     population: "386,464",
     area: "14,926 km²",
-    provinceFlag: "/images/ProvinceFlags/Albacete.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Albacete.svg",
   },
   Alicante: {
     population: "1,881,762",
     area: "5,817 km²",
-    provinceFlag: "/images/ProvinceFlags/Alicante.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Alicante.svg",
   },
   Almeria: {
     population: "731,792",
     area: "8,775 km²",
-    provinceFlag: "/images/ProvinceFlags/Almería.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Almería.svg",
   },
   Andalusia: {
     population: "8,472,407",
     area: "87,598 km²",
-    regionFlag: "/images/RegionFlags/Andalusia.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Andalusia.svg",
   },
   Aragon: {
     population: "1,326,261",
     area: "47,720 km²",
-    regionFlag: "/images/RegionFlags/Aragon.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Aragon.svg",
   },
   Asturias: {
     population: "1,011,792",
     area: "10,604 km²",
-    regionFlag: "/images/RegionFlags/Asturias.svg",
-    provinceFlag: "/images/provinceFlags/Asturias.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Asturias.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Asturias.svg",
   },
   Avila: {
     population: "158,421",
     area: "8,050 km²",
-    provinceFlag: "/images/ProvinceFlags/Ávila.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Ávila.svg",
   },
   Badajoz: {
     population: "669,943",
     area: "21,766 km²",
-    provinceFlag: "/images/ProvinceFlags/Badajoz.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Badajoz.svg",
   },
   BalearicIslands: {
     population: "1,173,008",
     area: "4,992 km²",
-    regionFlag: "/images/RegionFlags/BalearicIslands.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/BalearicIslands.svg",
   },
   Barcelona: {
     population: "5,714,730",
     area: "7,728 km²",
-    provinceFlag: "/images/ProvinceFlags/Barcelona.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Barcelona.svg",
   },
   BasqueCountry: {
     population: "2,213,993",
     area: "7,235 km²",
-    regionFlag: "/images/RegionFlags/BasqueCountry.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/BasqueCountry.svg",
   },
   Bizkaia: {
     population: "1,154,334",
     area: "2,217 km²",
-    provinceFlag: "/images/ProvinceFlags/Bizkaia.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Bizkaia.svg",
   },
   Burgos: {
     population: "356,055",
     area: "14,291 km²",
-    provinceFlag: "/images/ProvinceFlags/Burgos.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Burgos.svg",
   },
   Cabrera: {
     population: "???",
     area: "8.9 km²",
-    provinceFlag: "/images/ProvinceFlags/no_flag.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/no_flag.svg",
   },
   Caceres: {
     population: "389,558",
     area: "19,868 km²",
-    provinceFlag: "/images/ProvinceFlags/Cáceres.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Cáceres.svg",
   },
   Cadiz: {
     population: "1,245,960",
     area: "7,436 km²",
-    provinceFlag: "/images/ProvinceFlags/Cádiz.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Cádiz.svg",
   },
   Cantabria: {
     population: "584,507",
     area: "5,321 km²",
-    regionFlag: "/images/RegionFlags/Cantabria.svg",
-    provinceFlag: "/images/ProvinceFlags/Cantabria.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Cantabria.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Cantabria.svg",
   },
   Castellon: {
     population: "587,064",
     area: "6,632 km²",
-    provinceFlag: "/images/ProvinceFlags/Castellón.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Castellón.svg",
   },
   CastileLaMancha: {
     population: "2,049,562",
     area: "79,462 km²",
-    regionFlag: "/images/RegionFlags/CastillaLaMancha.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/CastillaLaMancha.svg",
   },
   CastileYLeon: {
     population: "2,383,139",
     area: "94,225 km²",
-    regionFlag: "/images/RegionFlags/CastileYLeón.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/CastileYLeón.svg",
   },
   Catalonia: {
     population: "7,763,362",
     area: "32,113 km²",
-    regionFlag: "/images/RegionFlags/Catalonia.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Catalonia.svg",
   },
   Ceuta: {
     population: "83,517",
     area: "19.48 km²",
-    regionFlag: "/images/RegionFlags/Ceuta.svg",
-    provinceFlag: "/images/ProvinceFlags/Ceuta.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Ceuta.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Ceuta.svg",
   },
   CiudadReal: {
     population: "492,591",
     area: "19,813 km²",
-    provinceFlag: "/images/ProvinceFlags/CiudadReal.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/CiudadReal.svg",
   },
   Cordoba: {
     population: "776,789",
     area: "13,771 km²",
-    provinceFlag: "/images/ProvinceFlags/Córdoba.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Córdoba.svg",
   },
   Cuenca: {
     population: "195,516",
     area: "17,141 km²",
-    provinceFlag: "/images/ProvinceFlags/Cuenca.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Cuenca.svg",
   },
   Fuerteventura: {
     population: "126,227",
     area: "70.42 km²",
-    provinceFlag: "/images/ProvinceFlags/Fuerteventura.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Fuerteventura.svg",
   },
   Formentera: {
     population: "13,333",
     area: "83.24 km²",
-    provinceFlag: "/images/ProvinceFlags/Formentera.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Formentera.svg",
   },
   Galicia: {
     population: "2,695,645",
     area: "29,574 km²",
-    regionFlag: "/images/RegionFlags/Galicia.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Galicia.svg",
   },
   Gerona: {
     population: "786,596",
     area: "5,910 km²",
-    provinceFlag: "/images/ProvinceFlags/Gerona.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Gerona.svg",
   },
   Gipuzkoa: {
     population: "726,033",
     area: "1,980 km²",
-    provinceFlag: "/images/ProvinceFlags/Gipuzkoa.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Gipuzkoa.svg",
   },
   Granada: {
     population: "921,338",
     area: "12,647 km²",
-    provinceFlag: "/images/ProvinceFlags/Granada.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Granada.svg",
   },
   GranCanaria: {
     population: "870,595",
     area: "	1,560 km²",
-    provinceFlag: "/images/ProvinceFlags/GranCanaria.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/GranCanaria.svg",
   },
   Guadalajara: {
     population: "265,588",
     area: "12,212 km²",
-    provinceFlag: "/images/ProvinceFlags/Guadalajara.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Guadalajara.svg",
   },
   Huelva: {
     population: "525835",
     area: "10,128 km²",
-    provinceFlag: "/images/ProvinceFlags/Huelva.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Huelva.svg",
   },
   Huesca: {
     population: "224,264",
     area: "15,636 km²",
-    provinceFlag: "/images/ProvinceFlags/Huesca.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Huesca.svg",
   },
   Ibiza: {
     population: "159,249",
     area: "571.6 km²",
-    provinceFlag: "/images/ProvinceFlags/Ibiza.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Ibiza.svg",
   },
   ElHierro: {
     population: "11,338",
     area: "268 km²",
-    provinceFlag: "/images/ProvinceFlags/ElHierro.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/ElHierro.svg",
   },
   Extremadura: {
     population: "1,059,501",
     area: "41,635 km²",
-    regionFlag: "/images/RegionFlags/Extremadura.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Extremadura.svg",
   },
   Jaen: {
     population: "627,190",
     area: "13,496 km²",
-    provinceFlag: "/images/ProvinceFlags/Jaén.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Jaén.svg",
   },
   LaCoruna: {
     population: "1,120,134",
     area: "7,950 km²",
-    provinceFlag: "/images/ProvinceFlags/LaCoruña.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/LaCoruña.svg",
   },
   LaGraciosa: {
     population: "700",
     area: "29.05 km²",
-    provinceFlag: "/images/ProvinceFlags/no_Flag.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/no_Flag.svg",
   },
   Lanzarote: {
     population: "154,530",
     area: "845.94 km²",
-    provinceFlag: "/images/ProvinceFlags/Lanzarote.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Lanzarote.svg",
   },
   LaRioja: {
     population: "319,796",
     area: "5,045 km²",
-    regionFlag: "/images/RegionFlags/LaRioja.svg",
-    provinceFlag: "/images/ProvinceFlags/LaRioja.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/LaRioja.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/LaRioja.svg",
   },
   ProvincesOfLasPalmas: {
     population: "1,128,539",
     area: "4,066 km²",
-    provinceFlag: "/images/ProvinceFlags/LasPalmas.svg",
-    regionFlag: "/images/RegionFlags/LasPalmas.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/LasPalmas.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/LasPalmas.svg",
   },
   LaGomera: {
     population: "22,426",
     area: "370 km²",
-    provinceFlag: "/images/ProvinceFlags/LaGomera.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/LaGomera.svg",
   },
   LaPalma: {
     population: "85,840",
     area: "708 km²",
-    provinceFlag: "/images/ProvinceFlags/LaPalma.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/LaPalma.svg",
   },
   Leon: {
     population: "451,706",
     area: "15,581 km²",
-    provinceFlag: "/images/ProvinceFlags/León.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/León.svg",
   },
   Lerida: {
     population: "439,727",
     area: "12,172 km²",
-    provinceFlag: "/images/ProvinceFlags/Lérida.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Lérida.svg",
   },
   Lugo: {
     population: "326,013",
     area: "9,856 km²",
-    provinceFlag: "/images/ProvinceFlags/Lugo.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Lugo.svg",
   },
   Madrid: {
     population: "6,751,251",
     area: "8,028 km²",
-    regionFlag: "/images/RegionFlags/Madrid.svg",
-    provinceFlag: "/images/ProvinceFlags/Madrid.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Madrid.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Madrid.svg",
   },
   Malaga: {
     population: "1,695,651",
     area: "7,308 km²",
-    provinceFlag: "/images/ProvinceFlags/Málaga.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Málaga.svg",
   },
   Mallorca: {
     population: "947,804",
     area: "3,640 km²",
-    provinceFlag: "/images/ProvinceFlags/Mallorca.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Mallorca.svg",
   },
   Melilla: {
     population: "86,261",
     area: "13.41 km²",
-    regionFlag: "/images/RegionFlags/Melilla.svg",
-    provinceFlag: "/images/ProvinceFlags/Melilla.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Melilla.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Melilla.svg",
   },
   Menorca: {
     population: "99,037",
     area: "695.7 km²",
-    provinceFlag: "/images/ProvinceFlags/Menorca.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Menorca.svg",
   },
   Murcia: {
     population: "1,518,486",
     area: "11,313 km²",
-    regionFlag: "/images/RegionFlags/Murcia.svg",
-    provinceFlag: "/images/ProvinceFlags/Murcia.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Murcia.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Murcia.svg",
   },
   Navarra: {
     population: "661,537",
     area: "10,390 km² ",
-    regionFlag: "/images/RegionFlags/Navarra.svg",
-    provinceFlag: "/images/ProvinceFlags/Navarra.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/Navarra.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Navarra.svg",
   },
   Orense: {
     population: "305,223",
     area: "7,273 km²",
-    provinceFlag: "/images/ProvinceFlags/Ourense.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Ourense.svg",
   },
   Palencia: {
     population: "159,123",
     area: "8,053 km²",
-    provinceFlag: "/images/ProvinceFlags/Palencia.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Palencia.svg",
   },
   Pontevedra: {
     population: "944,275",
     area: "4,495 km²",
-    provinceFlag: "/images/ProvinceFlags/Pontevedra.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Pontevedra.svg",
   },
   Salamanca: {
     population: "327,338",
     area: "12,350 km²",
-    provinceFlag: "/images/ProvinceFlags/Salamanca.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Salamanca.svg",
   },
   ProvincesOfSantaCruzDeTenerife: {
     population: "1,044,405",
     area: "3,381 km²",
-    provinceFlag: "/images/ProvinceFlags/SantaCruzdeTenerife.svg",
-    regionFlag: "/images/RegionFlags/SantaCruzdeTenerife.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/SantaCruzdeTenerife.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/SantaCruzdeTenerife.svg",
   },
   Segovia: {
     population: "153,663",
     area: "6,923 km²",
-    provinceFlag: "/images/ProvinceFlags/Segovia.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Segovia.svg",
   },
   Sevilla: {
     population: "1,947,852",
     area: "14,036 km²",
-    provinceFlag: "/images/ProvinceFlags/Seville.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Seville.svg",
   },
   Soria: {
     population: "88,747",
     area: "10,306 km²",
-    provinceFlag: "/images/ProvinceFlags/Soria.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Soria.svg",
   },
   Tarragona: {
     population: "822,309",
     area: "6,303 km²",
-    provinceFlag: "/images/ProvinceFlags/Tarragona.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Tarragona.svg",
   },
   Teruel: {
     population: "134,545",
     area: "14,810 km²",
-    provinceFlag: "/images/ProvinceFlags/Teruel.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Teruel.svg",
   },
   Tenerife: {
     population: "966,354",
     area: "2,034 km²",
-    provinceFlag: "/images/ProvinceFlags/Tenerife.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Tenerife.svg",
   },
   Toledo: {
     population: "709,403",
     area: "15,370 km²",
-    provinceFlag: "/images/ProvinceFlags/Toledo.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Toledo.svg",
   },
   Valencia: {
     population: "2,589,312",
     area: "10,806 km²",
-    provinceFlag: "/images/ProvinceFlags/Valencia.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Valencia.svg",
   },
   ValencianCommunity: {
     population: "5,058,138",
     area: "23,255 km²",
-    regionFlag: "/images/RegionFlags/ValencianCommunity.svg",
+    regionFlag:
+      "/Projects/Spain Interactive Map Project/images/RegionFlags/ValencianCommunity.svg",
   },
   Valladolid: {
     population: "519,361",
     area: "8,110 km²",
-    provinceFlag: "/images/ProvinceFlags/Valladolid.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Valladolid.svg",
   },
   Zamora: {
     population: "168,725",
     area: "10,561 km²",
-    provinceFlag: "/images/ProvinceFlags/Zamora.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Zamora.svg",
   },
   Zaragoza: {
     population: "967,452",
     area: "17,275 km²",
-    provinceFlag: "/images/ProvinceFlags/Zaragoza.svg",
+    provinceFlag:
+      "/Projects/Spain Interactive Map Project/images/ProvinceFlags/Zaragoza.svg",
   },
 };
 

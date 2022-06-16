@@ -5,6 +5,11 @@
 This project was bespokely built and takes advantage of using JavaScript to manipulate attributes of an SVG html tag. A source SVG from Wikicommons Media was 
 used as a template for the map, but it had to be deconstructed manually so province data was able to be displayed.
 
+## How to install and run project
+
+* Clone this repository
+* Simply open index.html on a browser and the project will load
+
 ## How it works:
 
 * Map legend interactivity - jQuery.hover():
@@ -30,7 +35,4 @@ regarding weather, accomodation, restaurants, shopping centres or landmarks
   <img src="https://github.com/Harrisman05/Spain-Interactive-Map-Project/blob/master/full_demo.gif"/>
 </p>
 
-## How to install and run project
 
-* Clone this repository
-* Simply open index.html on a browser and the project will load

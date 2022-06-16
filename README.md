@@ -29,3 +29,8 @@ regarding weather, accomodation, restaurants, shopping centres or landmarks
 <p align="center">
   <img src="https://github.com/Harrisman05/Spain-Interactive-Map-Project/blob/master/full_demo.gif"/>
 </p>
+
+## How to install and run project
+
+* Clone this repository
+* Simply open index.html on a browser and the project will load
